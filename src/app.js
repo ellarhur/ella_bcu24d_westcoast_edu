@@ -29,3 +29,9 @@ fetch('../db.json')  // Gå en nivå upp från src-mappen för att hämta db.jso
   .catch(error => {
     console.error('Error fetching data:', error);  // Logga eventuella fel
   });
+
+
+
+  // course-details
+
+
