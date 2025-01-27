@@ -1,8 +1,24 @@
-{
-    "posts": [
-      { "id": 1, "title": "Hello World", "content": "This is your first post!" }
-    ],
-    "users": [
-      { "id": 1, "name": "John Doe" }
-    ]
-  }
+[
+    {
+      "id": 1,
+      "title": "Frontend Development",
+      "number": "WEB101",
+      "days": 5,
+      "classroom": true,
+      "online": true,
+      "image": "frontend.jpg",
+      "dates": ["2025-02-10", "2025-03-15"],
+      "description": "Lär dig grunderna i HTML, CSS och JavaScript!"
+    },
+    {
+      "id": 2,
+      "title": "Backend Development",
+      "number": "WEB201",
+      "days": 7,
+      "classroom": false,
+      "online": true,
+      "image": "backend.jpg",
+      "dates": ["2025-02-20"],
+      "description": "Djupdyk i serverhantering, databaser och API-utveckling."
+    }
+  ]
