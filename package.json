@@ -1,0 +1,16 @@
+{
+  "name": "ella_bcu24d_westcoast_edu",
+  "version": "1.0.0",
+  "main": "index.js",
+ "scripts": {
+  "start:server": "json-server --watch db.json --port 3000",
+  "start:app": "live-server --no-browser"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
