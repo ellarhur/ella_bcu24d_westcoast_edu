@@ -1,58 +1,31 @@
-import { fetchPosts, createPost } from './api.js';
-import { createElement } from './utils/helpers.js';
+// fetch för att hämta data från db.json
+fetch('../db.json')  // Gå en nivå upp från src-mappen för att hämta db.json
+  .then(response => {
+    if (response.ok) {
+      return response.json();  // Om svaret är bra, konvertera till JSON
+    } else {
+      throw new Error('Något gick fel med att hämta JSON.');
+    }
+  })
+  .then(data => {
+    // När vi har datan, logga ut den i konsolen
+    console.log(data);
 
-const init = async () => {
-  const postsContainer = document.getElementById('posts');
-
-  // Fetch and render posts
-  const posts = await fetchPosts();
-  posts.forEach(post => {
-    const postElement = createElement('div', 'post', post.title);
-    postsContainer.appendChild(postElement);
+    // Hämta elementet där vi vill visa kursdata
+    const coursesContainer = document.getElementById('courses');
+    
+    // Iterera genom kurserna och skapa HTML för varje kurs
+    data.forEach(course => {
+      const courseElement = document.createElement('div');
+      courseElement.classList.add('course');
+      courseElement.innerHTML = `
+        <h3>${course.title}</h3>
+        <p>${course.description}</p>
+        <img src="${course.image}" alt="${course.title}" />
+      `;
+      coursesContainer.appendChild(courseElement);  // Lägg till kursen i HTML
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);  // Logga eventuella fel
   });
-
-  // Add event listener for creating posts
-  document.getElementById('createPost').addEventListener('click', async () => {
-    const newPost = { title: 'New Post', content: 'Content goes here' };
-    await createPost(newPost);
-    alert('Post created! Refresh to see the changes.');
-  });
-};
-
-init()
-
-
-// LANDING PAGE SLIDESHOW HÄMTAD FRÅN W3 SCHOOLS
-import {} from '';
-
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}

@@ -1,3 +1,4 @@
+
 [
     {
       "id": 1,
@@ -6,7 +7,7 @@
       "days": 15,
       "classroom": false,
       "online": true,
-      "image": "kurs1.png",
+      "image": "images/kurs1.png",
       "dates": ["2025-02-10", "2025-03-15"],
       "description": "Lär dig HTML, CSS och JavaScript för att skapa moderna och responsiva webbsidor."
     },
@@ -17,7 +18,7 @@
       "days": 15,
       "classroom": false,
       "online": true,
-      "image": "kurs2.png",
+      "image": "images/kurs2.png",
       "dates": ["2025-02-20"],
       "description": "Djupdyk i serverhantering, databaser och API-utveckling."
     },
@@ -29,7 +30,7 @@
     "days": 30,
     "classroom": false,
     "online": true,
-    "image": "kurs3.png",
+    "image": "images/kurs3.png",
     "dates": ["2025-02-20"],
     "description": "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
 
@@ -43,7 +44,7 @@
     "days": 3,
     "classroom": true,
     "online": true,
-    "image": "kurs4.png",
+    "image": "images/kurs4.png",
     "dates": ["2025-02-20"],
     "description": "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
 
@@ -58,7 +59,7 @@
     "days": 3,
     "classroom": false,
     "online": true,
-    "image": "kurs5.png",
+    "image": "images/kurs5.png",
     "dates": ["2025-02-20"],
     "description": "Lär dig grunderna i Swift och hur man skapar iPhone-appar."
 
@@ -74,7 +75,7 @@
     "days": 3,
     "classroom": false,
     "online": true,
-    "image": "kurs6.png",
+    "image": "images/kurs6.png",
     "dates": ["2025-02-20"],
     "description": "Bygg Android-applikationer med det kraftfulla språket Kotlin."
 
@@ -90,7 +91,7 @@
     "days": 15,
     "classroom": false,
     "online": true,
-    "image": "kurs7.png",
+    "image": "images/kurs7.png",
     "dates": ["2025-02-20"],
     "description": "Förstå hur du kan använda molntjänster för att hantera data och hosting."
 
@@ -106,7 +107,7 @@
     "days": 30,
     "classroom": false,
     "online": true,
-    "image": "kurs8.png",
+    "image": "images/kurs8.png",
     "dates": ["2025-02-20"],
     "description": "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
 
@@ -122,7 +123,7 @@
     "days": 30,
     "classroom": false,
     "online": true,
-    "image": "kurs9.png",
+    "image": "images/kurs9.png",
     "dates": ["2025-02-20"],
     "description": "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
 
@@ -138,7 +139,7 @@
     "days": 30,
     "classroom": false,
     "online": true,
-    "image": "kurs10.png",
+    "image": "images/kurs10.png",
     "dates": ["2025-02-20"],
     "description": "Bygg robusta företagsapplikationer med Microsofts ramverk."
 
@@ -154,7 +155,7 @@
     "days": 3,
     "classroom": false,
     "online": true,
-    "image": "kurs11.png",
+    "image": "images/kurs11.png",
     "dates": ["2025-02-20"],
     "description": "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
 
@@ -170,7 +171,7 @@
     "days": 3,
     "classroom": false,
     "online": true,
-    "image": "kurs12.png",
+    "image": "images/kurs12.png",
     "dates": ["2025-02-20"],
     "description": "För dig som är klar med webbapplikationer och vill jobba med AI!"
 
@@ -186,7 +187,7 @@
     "days": 7,
     "classroom": false,
     "online": true,
-    "image": "kurs13.png",
+    "image": "images/kurs13.png",
     "dates": ["2025-02-20"],
     "description": "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
 
@@ -199,7 +200,7 @@
       "days": 7,
       "classroom": false,
       "online": true,
-      "image": "kurs14.png",
+      "image": "images/kurs14.jpg",
       "dates": ["2025-02-20"],
       "description": "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
   
@@ -211,7 +212,7 @@
         "days": 1,
         "classroom": false,
         "online": true,
-        "image": "kurs15.png",
+        "image": "images/kurs15.png",
         "dates": ["2025-02-20"],
         "description": "En-dagsföreläsning för företag inom IT-sektorn för att förbättra arbetsmiljön."
     
