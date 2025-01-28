@@ -46,10 +46,10 @@ ul {
     list-style-type:none;
 }
 
-p {
+p, .courses-info {
     font-family: "Albert Sans", serif;
     font-size:1rem;
-    font-style: normal;
+    font-style: italic;
 }
 
 body{
@@ -141,4 +141,55 @@ body{
   height: auto;
   border-radius: 4px;
   margin-top: 10px;
+}
+
+.course-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.course-image-container {
+  text-align:center;
+
+}
+
+#course-image {
+  max-width:500px;
+  text-align:center;
+  border-radius:8px;
+}
+
+button {
+  background-color:#D9D9D9;
+  color:#555;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border:none;
+  border-radius:8px;
+  padding:15px;
+  width:200px;
+  height:auto;
+  font-size:1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+
+
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 20px;
+  right: 60px;
+}
+
+.login button {
+  padding: 8px 16px;
+  width:120px;
+  font-size:0.8rem;
 }

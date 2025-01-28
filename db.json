@@ -119,7 +119,7 @@
     {
     "id": 9,
     "title": "Djupdyk i Java",
-    "number": "LAN101",
+    "number": "LAN201",
     "days": 30,
     "classroom": false,
     "online": true,
@@ -135,7 +135,7 @@
     {
     "id": 10,
     "title": "Djupdyk i C#",
-    "number": "WEB301",
+    "number": "LAN301",
     "days": 30,
     "classroom": false,
     "online": true,
