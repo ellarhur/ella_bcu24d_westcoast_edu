@@ -26,15 +26,37 @@
 <body>
     
 <h2>Administrationssida för lärare</h2>
-<div class="make-new">
-<h2>Registera nya kurser</h2>
-<p>Boka kurs: namn</p>
-<p>Kursnummer: </p>
-<p>Antal dagar:</p>
-<p>Start och slut-datum: </p>
-<p>Kostnad för kursen:</p>
-</div>
+<form id="addCourseForm">
+    <h2>Lägg till en ny kurs</h2>
+    
+    <label for="title">Kursnamn:</label>
+    <input type="text" id="title" name="title" required>
 
+    <label for="number">Kursnummer:</label>
+    <input type="text" id="number" name="number" required>
+
+    <label for="days">Antal dagar:</label>
+    <input type="number" id="days" name="days" required>
+
+    <label for="dates">Startdatum (komma-separerade):</label>
+    <input type="text" id="dates" name="dates" placeholder="YYYY-MM-DD, YYYY-MM-DD" required>
+
+    <label for="classroom">Klassrumskurs:</label>
+    <input type="checkbox" id="classroom" name="classroom">
+
+    <label for="teacher">Välj lärare:</label>
+<select name="teacher" id="teacher">
+      <option value="Acey">Acey Desaay</option>
+      <option value="Elin">Ledsep Elin</option>
+      <option value="Michael">Michael "The flash" Gustavsson</option>
+      <option value="Ella">Ella Belle Åkesson</option>
+    </select>
+    <label for="online">Onlinekurs:</label>
+    <input type="checkbox" id="online" name="online" checked>
+
+    <button type="submit">Lägg till kurs</button>
+</form>
+    
 <h1>Administrera Kurser</h1>
 </header>
 

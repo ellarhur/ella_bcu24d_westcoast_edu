@@ -32,7 +32,35 @@
 
 
 
+<form id="applyCourse">
+    <h2>Sök till en kurs</h2>
+    
+    <label for="title">Kursnamn:</label>
+    <input type="text" id="title" name="title" required>
 
+    <label for="number">Kursnummer:</label>
+    <input type="text" id="number" name="number" required>
+
+    <label for="description">Beskrivning:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <label for="days">Antal dagar:</label>
+    <input type="number" id="days" name="days" required>
+
+    <label for="dates">Startdatum (komma-separerade):</label>
+    <input type="text" id="dates" name="dates" placeholder="YYYY-MM-DD, YYYY-MM-DD" required>
+
+    <label for="classroom">Klassrumskurs:</label>
+    <input type="checkbox" id="classroom" name="classroom">
+
+    <label for="online">Onlinekurs:</label>
+    <input type="checkbox" id="online" name="online" checked>
+
+    <label for="students">Registrerade studenter (komma-separerade):</label>
+    <input type="text" id="students" name="students" placeholder="Namn1, Namn2, Namn3">
+
+    <button type="submit">Lägg till kurs</button>
+</form>
 
 <button onclick="logout()">Logga ut</button>
 

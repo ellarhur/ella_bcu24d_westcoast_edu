@@ -10,6 +10,8 @@
       "image": "images/kurs1.png",
       "dates": ["2025-02-10", "2025-03-15"],
       "students": ["George", "Hannah", "Isabella"],
+      "average": "A",
+      "teacher": "Ella Åkesson",
       "description": "Lär dig HTML, CSS och JavaScript för att skapa moderna och responsiva webbsidor."
     },
     {
@@ -22,6 +24,8 @@
       "image": "images/kurs2.png",
       "dates": ["2025-02-20"],
       "students": ["George", "Hannah", "Isabella"],
+      "average": "A",
+      "teacher": "Ella Åkesson",
       "description": "Djupdyk i serverhantering, databaser och API-utveckling."
     },
 
@@ -35,6 +39,8 @@
     "image": "images/kurs3.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+          "average": "A",
+      "teacher": "Ella Åkesson",
     "description": "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
 
     }
@@ -50,6 +56,8 @@
     "image": "images/kurs4.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
 
     }
@@ -66,6 +74,8 @@
     "image": "images/kurs5.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Lär dig grunderna i Swift och hur man skapar iPhone-appar."
 
     }
@@ -83,6 +93,8 @@
     "image": "images/kurs6.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Bygg Android-applikationer med det kraftfulla språket Kotlin."
 
     }
@@ -100,6 +112,8 @@
     "image": "images/kurs7.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Förstå hur du kan använda molntjänster för att hantera data och hosting."
 
     }
@@ -117,6 +131,8 @@
     "image": "images/kurs8.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
 
     }
@@ -134,6 +150,8 @@
     "image": "images/kurs9.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
 
     }
@@ -151,6 +169,8 @@
     "image": "images/kurs10.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Bygg robusta företagsapplikationer med Microsofts ramverk."
 
     }
@@ -168,6 +188,8 @@
     "image": "images/kurs11.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
 
     }
@@ -185,6 +207,8 @@
     "image": "images/kurs12.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "För dig som är klar med webbapplikationer och vill jobba med AI!"
 
     }
@@ -202,6 +226,8 @@
     "image": "images/kurs13.png",
     "dates": ["2025-02-20"],
     "students": ["George", "Hannah", "Isabella"],
+    "average": "A",
+    "teacher": "Ella Åkesson",
     "description": "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
 
     },
@@ -216,6 +242,8 @@
       "image": "images/kurs14.jpg",
       "dates": ["2025-02-20"],
       "students": ["George", "Hannah", "Isabella"],
+      "average": "A",
+      "teacher": "Ella Åkesson",
       "description": "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
   
       },
@@ -229,6 +257,8 @@
         "image": "images/kurs15.png",
         "dates": ["2025-02-20"],
         "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "teacher": "Ella Åkesson",
         "description": "En-dagsföreläsning för företag inom IT-sektorn för att förbättra arbetsmiljön."
     
         }

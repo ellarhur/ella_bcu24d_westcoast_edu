@@ -18,16 +18,35 @@
 <h1>Westcoast Education</h1>
 <nav>    <ul>
     <li><a href="index.html">Om oss</a></li>
-    <li><a href="#">Utbildningsteam</a></li>
+    <li><a href="about.html">Utbildningsteam</a></li>
     <li><a href="courses.html">Våra kurser</a></li>
-    <li><a href="chat.html">Chattforum</a></li>
+    <li><a href="#">Chattforum</a></li>
 </ul></nav>
 </header>
 <body>
-        <div class="landing-page-image">
-          <div class="landing-page-image-text">Utbildar nästa generation
-          <br> <a href="courses.html" class="popularcourse">Se populära kurser</a>
-        </div></div>
+    
+</header>
+
+<h1>Chatta med oss</h1>
+<div class="chat-container">
+    <h2>Chatt</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="chat-input" placeholder="Skriv ett meddelande..." />
+    <button onclick="sendMessage()">Skicka</button>
+</div>
+
+<div class="email-container">
+    <label for="email">Skicka e-post</label>
+    <select aria-label="recipient" id="recipient">
+        <option value="user1@example.com">Användare 1</option>
+        <option value="user2@example.com">Användare 2</option>
+        <option value="user3@example.com">Användare 3</option>
+    </select>
+    <input type="text" id="email-subject" placeholder="Ämne" />
+    <textarea id="email-message" placeholder="Skriv ditt meddelande här..."></textarea>
+    <button onclick="sendEmail()">Skicka e-post</button>
+</div>
+
 
 </body>
 </html>
