@@ -9,6 +9,7 @@
       "online": true,
       "image": "images/kurs1.png",
       "dates": ["2025-02-10", "2025-03-15"],
+      "students": ["George", "Hannah", "Isabella"],
       "description": "Lär dig HTML, CSS och JavaScript för att skapa moderna och responsiva webbsidor."
     },
     {
@@ -20,6 +21,7 @@
       "online": true,
       "image": "images/kurs2.png",
       "dates": ["2025-02-20"],
+      "students": ["George", "Hannah", "Isabella"],
       "description": "Djupdyk i serverhantering, databaser och API-utveckling."
     },
 
@@ -32,6 +34,7 @@
     "online": true,
     "image": "images/kurs3.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
 
     }
@@ -46,6 +49,7 @@
     "online": true,
     "image": "images/kurs4.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
 
     }
@@ -61,6 +65,7 @@
     "online": true,
     "image": "images/kurs5.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Lär dig grunderna i Swift och hur man skapar iPhone-appar."
 
     }
@@ -77,6 +82,7 @@
     "online": true,
     "image": "images/kurs6.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Bygg Android-applikationer med det kraftfulla språket Kotlin."
 
     }
@@ -93,6 +99,7 @@
     "online": true,
     "image": "images/kurs7.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Förstå hur du kan använda molntjänster för att hantera data och hosting."
 
     }
@@ -109,6 +116,7 @@
     "online": true,
     "image": "images/kurs8.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
 
     }
@@ -125,6 +133,7 @@
     "online": true,
     "image": "images/kurs9.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
 
     }
@@ -141,6 +150,7 @@
     "online": true,
     "image": "images/kurs10.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Bygg robusta företagsapplikationer med Microsofts ramverk."
 
     }
@@ -157,6 +167,7 @@
     "online": true,
     "image": "images/kurs11.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
 
     }
@@ -173,6 +184,7 @@
     "online": true,
     "image": "images/kurs12.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "För dig som är klar med webbapplikationer och vill jobba med AI!"
 
     }
@@ -189,6 +201,7 @@
     "online": true,
     "image": "images/kurs13.png",
     "dates": ["2025-02-20"],
+    "students": ["George", "Hannah", "Isabella"],
     "description": "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
 
     },
@@ -202,6 +215,7 @@
       "online": true,
       "image": "images/kurs14.jpg",
       "dates": ["2025-02-20"],
+      "students": ["George", "Hannah", "Isabella"],
       "description": "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
   
       },
@@ -214,6 +228,7 @@
         "online": true,
         "image": "images/kurs15.png",
         "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
         "description": "En-dagsföreläsning för företag inom IT-sektorn för att förbättra arbetsmiljön."
     
         }
