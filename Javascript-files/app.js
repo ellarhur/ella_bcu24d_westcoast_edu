@@ -1,4 +1,4 @@
-// app.js
+
 document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.includes("course-details.html")) {
     loadCourseDetails();
@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadCourses() {
-  fetch("db.json")
+  fetch("../db.json")
     .then(response => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Något fick fel.');
       }
       return response.json();
     })
@@ -36,7 +36,7 @@ function loadCourses() {
       });
     })
     .catch(error => {
-      console.error("Error fetching data:", error);
+      console.error("Fel på fetch:", error);
       const coursesContainer = document.getElementById("courses");
       if (coursesContainer) {
         coursesContainer.innerHTML = "<p>Det gick inte att ladda kurserna. Försök igen senare.</p>";
@@ -53,7 +53,7 @@ function loadCourseDetails() {
     return;
   }
 
-  fetch("/db.json")
+  fetch("../db.json")
 
   .then(response => {
       if (!response.ok) {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const courseList = document.getElementById("courseList");
 
   // Hämta kurser från db.json (simulerad fetch från en lokal JSON-fil)
-  fetch("db.json")  
+  fetch("../db.json")  
       .then(response => response.json())
       .then(courses => {
           courses.forEach(course => {
@@ -290,3 +290,201 @@ function updateStudentList() {
 }
 
 
+document.getElementById("addCourseForm").addEventListener("submit", async function(event) {
+  event.preventDefault(); // Stoppar sidan från att laddas om
+
+  // Hämta värden från formuläret
+  const title = document.getElementById("title").value;
+  const number = document.getElementById("number").value;
+  const description = document.getElementById("description").value;
+  const days = parseInt(document.getElementById("days").value);
+  const dates = document.getElementById("dates").value.split(",").map(date => date.trim());
+  const classroom = document.getElementById("classroom").checked;
+  const online = document.getElementById("online").checked;
+  const students = document.getElementById("students").value ? document.getElementById("students").value.split(",").map(student => student.trim()) : [];
+
+  // Skapa kursobjekt
+  const newCourse = {
+      title,
+      number,
+      description,
+      days,
+      dates,
+      classroom,
+      online,
+      students,
+      image: "images/default.png" // Placeholder-bild
+  };
+
+  // Skicka kursen till JSON-servern
+  try {
+      const response = await fetch("http://localhost:3000/courses", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(newCourse)
+      });
+
+      if (response.ok) {
+          alert("Kurs tillagd!");
+          document.getElementById("addCourseForm").reset(); // Rensa formuläret
+      } else {
+          alert("Något gick fel. Försök igen.");
+      }
+  } catch (error) {
+      console.error("Error:", error);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const userRole = localStorage.getItem("userRole");
+  const userEmail = localStorage.getItem("userEmail");
+
+  if (!userRole) {
+      alert("Du måste vara inloggad!");
+      window.location.href = "login.html";
+  } else {
+      console.log(`Inloggad som ${userRole} (${userEmail})`);
+  }
+});
+
+function logout() {
+  localStorage.removeItem("userRole");
+  localStorage.removeItem("userEmail");
+  window.location.href = "login.html";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("DINA_USER_ID_HÄR"); // Ersätt med din EmailJS User ID
+});
+
+// Funktion för att skicka meddelande i chatten
+function sendMessage() {
+  let input = document.getElementById("chat-input");
+  let chatBox = document.getElementById("chat-box");
+
+  if (input.value.trim() !== "") {
+      let message = document.createElement("div");
+      message.textContent = input.value;
+      message.style.padding = "10px";
+      message.style.margin = "5px 0";
+      message.style.background = "#ddd";
+      message.style.borderRadius = "5px";
+      chatBox.appendChild(message);
+      chatBox.scrollTop = chatBox.scrollHeight; // Scrolla ner till senaste meddelandet
+      input.value = "";
+  }
+}
+
+// Funktion för att skicka e-post
+function sendEmail() {
+  let recipient = document.getElementById("recipient").value;
+  let subject = document.getElementById("email-subject").value;
+  let message = document.getElementById("email-message").value;
+
+  if (subject.trim() === "" || message.trim() === "") {
+      alert("Fyll i både ämne och meddelande.");
+      return;
+  }
+
+  let emailParams = {
+      to_email: recipient,
+      subject: subject,
+      message: message,
+  };
+
+  emailjs.send("DINA_SERVICE_ID_HÄR", "DINA_TEMPLATE_ID_HÄR", emailParams)
+      .then(function (response) {
+          alert("E-post skickat!");
+          document.getElementById("email-subject").value = "";
+          document.getElementById("email-message").value = "";
+      }, function (error) {
+          alert("Något gick fel: " + JSON.stringify(error));
+      });
+}
+
+ // Hämta formuläret och fält
+ const loginForm = document.getElementById("loginForm");
+ const errorElement = document.getElementById("error");
+ 
+ // Simulerad användardata
+ const mockUser = {
+   username: "admin",
+   password: "password123"
+ };
+ 
+ // När formuläret skickas
+ loginForm.addEventListener("submit", function (event) {
+   event.preventDefault(); // Hindrar sidan från att laddas om
+ 
+   // Hämta användarnamn och lösenord från formuläret
+   const username = document.getElementById("username").value;
+   const password = document.getElementById("password").value;
+ 
+   // Kontrollera om inloggningsuppgifterna är korrekta
+   if (username === mockUser.username && password === mockUser.password) {
+     alert("Inloggning lyckades!");
+     window.location.href = "dashboard.html"; // Skicka användaren till en ny sida
+   } else {
+     errorElement.textContent = "Fel användarnamn eller lösenord!";
+   }
+ });
+ 
+ loginForm.addEventListener("submit", async function (event) {
+     event.preventDefault();
+   
+     const username = document.getElementById("username").value;
+     const password = document.getElementById("password").value;
+   
+     try {
+       const response = await fetch("http://localhost:3000/login", {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json"
+         },
+         body: JSON.stringify({ username, password })
+       });
+   
+       if (response.ok) {
+         const data = await response.json();
+         alert(data.message);
+         window.location.href = "admin.html"; // Skicka användaren vidare
+       } else {
+         const error = await response.json();
+         errorElement.textContent = error.error;
+       }
+     } catch (err) {
+       errorElement.textContent = "Ett tekniskt fel inträffade!";
+     }
+   });
+
+   const express = require("express");
+   const bodyParser = require("body-parser");
+   const cors = require("cors");
+   
+   const app = express();
+   app.use(bodyParser.json());
+   app.use(cors());
+   
+   // Simulerad användardata
+   const mockUser = {
+     username: "admin",
+     password: "password123"
+   };
+   
+   // Endpoint för inloggning
+   app.post("/login", (req, res) => {
+     const { username, password } = req.body;
+   
+     if (username === mockUser.username && password === mockUser.password) {
+       res.status(200).json({ message: "Inloggning lyckades!" });
+     } else {
+       res.status(401).json({ error: "Fel användarnamn eller lösenord!" });
+     }
+   });
+   
+   // Starta servern
+   app.listen(3000, () => {
+     console.log("Servern körs på http://localhost:3000");
+   });
