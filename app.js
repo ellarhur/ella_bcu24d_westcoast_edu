@@ -189,3 +189,104 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch(error => console.error("Fel vid hämtning av kurser:", error));
 });
+
+function deleteCourse(courseId) {
+  fetch(`/api/courses/${courseId}`, {
+      method: 'DELETE',
+  })
+  .then(response => {
+      if (response.ok) {
+          // Ta bort kursen från DOM:en
+          const courseElement = document.querySelector(`[data-course-id="${courseId}"]`);
+          courseElement?.remove();
+      } else {
+          throw new Error('Kunde inte ta bort kursen');
+      }
+  })
+  .catch(error => console.error('Fel vid borttagning:', error));
+}
+
+// Funktion för att uppdatera kursschema
+function updateCourseSchedule(courseId, newDates) {
+  fetch(`/api/courses/${courseId}`, {
+      method: 'PATCH',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ dates: newDates })
+  })
+  .then(response => response.json())
+  .then(updatedCourse => {
+      // Uppdatera UI:n med nya datum
+      const dateDisplay = document.querySelector(`[data-course-id="${courseId}"] .course-dates`);
+      if (dateDisplay) {
+          dateDisplay.textContent = `Kursdatum: ${updatedCourse.dates.join(', ')}`;
+      }
+  })
+  .catch(error => console.error('Fel vid uppdatering:', error));
+}
+
+// Funktion för att lägga till ny lärare
+function addTeacher(teacherData) {
+  fetch('/api/teachers', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(teacherData)
+  })
+  .then(response => response.json())
+  .then(newTeacher => {
+      // Uppdatera lärarväljaren i formuläret
+      const teacherSelect = document.getElementById('teacher');
+      const option = document.createElement('option');
+      option.value = newTeacher.id;
+      option.textContent = newTeacher.name;
+      teacherSelect.appendChild(option);
+  })
+  .catch(error => console.error('Fel vid lägg till lärare:', error));
+}
+
+// Funktion för att hantera elever
+function manageStudent(action, studentData) {
+  const endpoint = action === 'add' ? '/api/students' : `/api/students/${studentData.id}`;
+  const method = action === 'add' ? 'POST' : action === 'update' ? 'PUT' : 'DELETE';
+
+  fetch(endpoint, {
+      method: method,
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: method !== 'DELETE' ? JSON.stringify(studentData) : undefined
+  })
+  .then(response => response.json())
+  .then(data => {
+      updateStudentList();
+  })
+  .catch(error => console.error('Fel vid studenthantering:', error));
+}
+
+// Funktion för att uppdatera studentlistan i UI:n
+function updateStudentList() {
+  fetch('/api/students')
+      .then(response => response.json())
+      .then(students => {
+          const studentList = document.getElementById('studentList');
+          studentList.innerHTML = '';
+          students.forEach(student => {
+              const studentElement = document.createElement('div');
+              studentElement.classList.add('student-item');
+              studentElement.innerHTML = `
+                  <h4>${student.name}</h4>
+                  <p>Email: ${student.email}</p>
+                  <p>Registrerade kurser: ${student.courses.join(', ')}</p>
+                  <button onclick="manageStudent('delete', {id: '${student.id}'})">Ta bort</button>
+                  <button onclick="editStudent('${student.id}')">Redigera</button>
+              `;
+              studentList.appendChild(studentElement);
+          });
+      })
+      .catch(error => console.error('Fel vid hämtning av studenter:', error));
+}
+
+

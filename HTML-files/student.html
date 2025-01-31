@@ -7,33 +7,42 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="app.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="/app.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="../styles.css">
     <title>Westcoast Education</title>
 </head>
 <header>
-<div class="login">
-    <button onclick="window.location.href='log-sign.html';" type="button">Logga in</button>
-    <button onclick="window.location.href='log-sign.html';" type="button">Skapa konto</button></div>
+    <div class="login">
+        <button onclick="window.location.href='log-sign.html';" type="button">Logga in</button>
+        <button onclick="window.location.href='log-sign.html';" type="button">Skapa konto</button></div>
 <h1>Westcoast Education</h1>
-<nav>    <ul>
-    <li><a href="index.html">Om oss</a></li>
-    <li><a href="#">Utbildningsteam</a></li>
-    <li><a href="courses.html">Våra kurser</a></li>
-    <li><a href="#">Chattforum</a></li>
+<nav><ul>
+    <li><a href="/HTML-files/index.html">Om oss</a></li>
+    <li><a href="/HTML-files/about.html">Utbildningsteam</a></li>
+    <li><a href="/HTML-files/courses.html">Våra kurser</a></li>
+    <li><a href="/HTML-files/chat.html">Chattforum</a></li>
 </ul></nav>
 </header>
 <body>
-    
-<h2>Administrationssida för lärare</h2>
-<form id="addCourseForm">
-    <h2>Lägg till en ny kurs</h2>
+
+
+<h2>Välkommen, Student</h2>
+<p>Här kan du boka kurser och se din kursstatus.</p>
+
+
+
+
+<form id="applyCourse">
+    <h2>Sök till en kurs</h2>
     
     <label for="title">Kursnamn:</label>
     <input type="text" id="title" name="title" required>
 
     <label for="number">Kursnummer:</label>
     <input type="text" id="number" name="number" required>
+
+    <label for="description">Beskrivning:</label>
+    <textarea id="description" name="description" required></textarea>
 
     <label for="days">Antal dagar:</label>
     <input type="number" id="days" name="days" required>
@@ -44,28 +53,16 @@
     <label for="classroom">Klassrumskurs:</label>
     <input type="checkbox" id="classroom" name="classroom">
 
-    <label for="teacher">Välj lärare:</label>
-<select name="teacher" id="teacher">
-      <option value="Acey">Acey Desaay</option>
-      <option value="Elin">Ledsep Elin</option>
-      <option value="Michael">Michael "The flash" Gustavsson</option>
-      <option value="Ella">Ella Belle Åkesson</option>
-    </select>
     <label for="online">Onlinekurs:</label>
     <input type="checkbox" id="online" name="online" checked>
 
+    <label for="students">Registrerade studenter (komma-separerade):</label>
+    <input type="text" id="students" name="students" placeholder="Namn1, Namn2, Namn3">
+
     <button type="submit">Lägg till kurs</button>
 </form>
-    
-<h1>Administrera Kurser</h1>
-</header>
-
-<main>
-    <h2>Lista över Kurser</h2>
-    <div id="courseList"></div> <!-- Här fylls kurslistan dynamiskt -->
-
 
 <button onclick="logout()">Logga ut</button>
-    
+
 </body>
 </html>
