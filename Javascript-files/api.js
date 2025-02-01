@@ -1,6 +1,5 @@
 const API_URL = "http://localhost:3000";
 
-// Hämta alla kurser
 export async function fetchCourses() {
     const response = await fetch(`${API_URL}/courses`);
     if (!response.ok) throw new Error("Misslyckades att hämta kurser");
