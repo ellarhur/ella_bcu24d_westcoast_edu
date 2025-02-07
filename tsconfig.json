@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES6",                // Sätt till ES6 eller senare
-    "module": "ESNext",              // Sätt till ESNext för att använda moderna moduler
-    "outDir": "./dist",              // Anger mappen där de komplierade JS-filerna ska sparas
-    "rootDir": "./src",              // Sätt till din källmapp (där dina .ts-filer finns)
-    "strict": true                   // För striktare typkontroll
+    "target": "ES2020",
+    "module": "ES2020",
+    "outDir": "./dist", 
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*.ts"],          // Inkludera alla TypeScript-filer i src-mappen
-  "exclude": ["node_modules"]          // Exkludera node_modules för att inte kompilera den
+  "include": ["src", "src/data/courses.ts"],
+  "exclude": ["node_modules"]
 }

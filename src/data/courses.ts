@@ -1,0 +1,241 @@
+import { ICourse} from "../models/ICourse.js";
+
+export const courses: ICourse[] = [
+      {
+        "id": 1,
+        "title": "Frontend Development",
+        "number": "WEB101",
+        "days": 15,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs1.png",
+        "dates": ["2025-02-10", "2025-03-15"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Lär dig HTML, CSS och JavaScript för att skapa moderna och responsiva webbsidor."
+      },
+      {
+        "id": 2,
+        "title": "Backend Development",
+        "number": "WEB201",
+        "days": 15,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs2.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Djupdyk i serverhantering, databaser och API-utveckling."
+      },
+  
+      {
+        "id": 3,
+        "title": "Fullstack Development",
+        "number": "WEB301",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs3.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
+      },
+      {
+        "id": 4,
+        "title": "Introkurs till Figma och Adobe",
+        "number": "DES101",
+        "days": 3,
+        "classroom": true,
+        "online": true,
+        "image": "/images/kurs4.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
+      },
+  
+      {
+        "id": 5,
+        "title": "Introkurs till apputveckling av iOS-appar",
+        "number": "APP101",
+        "days": 3,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs5.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Lär dig grunderna i Swift och hur man skapar iPhone-appar."
+      },
+  
+      {
+        "id": 6,
+        "title": "Introkurs till apputveckling av Android-appar",
+        "number": "APP102",
+        "days": 3,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs6.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Bygg Android-applikationer med det kraftfulla språket Kotlin."
+      },
+  
+      {
+        "id": 7,
+        "title": "Arbeta med Molntjänster (AWS, Azure, Google Cloud)",
+        "number": "AWS101",
+        "days": 15,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs7.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Förstå hur du kan använda molntjänster för att hantera data och hosting."
+      },
+  
+      {
+        "id": 8,
+        "title": "Djupdyk i Python",
+        "number": "LAN101",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs8.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
+      },
+  
+      {
+        "id": 9,
+        "title": "Djupdyk i Java",
+        "number": "LAN201",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs9.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
+      },
+  
+      {
+        "id": 10,
+        "title": "Djupdyk i C#",
+        "number": "LAN301",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs10.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Bygg robusta företagsapplikationer med Microsofts ramverk."
+      },
+  
+      {
+        "id": 11,
+        "title": "Bli en proffsig AI prompt engineer",
+        "number": "AI101",
+        "days": 3,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs11.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+  
+        "teacher": "Ella Åkesson",
+        "description": "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
+      },
+  
+      {
+        "id": 12,
+        "title": "Programmera egna AI-verktyg",
+        "number": "AI201",
+        "days": 3,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs12.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "För dig som är klar med webbapplikationer och vill jobba med AI!"
+      },
+  
+      {
+        "id": 13,
+        "title": "Grundläggande IT-säkerhet för nätverk",
+        "number": "NET101",
+        "days": 7,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs13.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
+      },
+  
+      {
+        "id": 14,
+        "title": "Etisk hackning och brandväggar",
+        "number": "NET201",
+        "days": 7,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs14.jpg",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
+      },
+      {
+        "id": 15,
+        "title": "Gruppdynamik, GDPR och kontorsmiljön",
+        "number": "COM101",
+        "days": 1,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs15.png",
+        "dates": ["2025-02-20"],
+        "students": ["George", "Hannah", "Isabella"],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Ella Åkesson",
+        "description": "En-dagsföreläsning för företag inom IT-sektorn för att förbättra arbetsmiljön."
+      }
+    ]

@@ -1,33 +1,44 @@
-fetch('../db.json')
-  .then(response => response.json()) // Omvandlar JSON från servern
-  .then(data => {
-    console.log('Hämtad data:', data); // Kolla om datan hämtas korrekt
-    const courses = data.courses; // Hämta kurslistan från JSON
-    const coursesContainer = document.getElementById('courses'); // Hämta div för kurserna
-    if (!coursesContainer) {
-      console.error('Elementet för kurserna hittades inte!');
-      return;
+import { courses } from '../data/courses.js';
+import { ICourse } from '../models/ICourse.js'
+
+const initApp = () => {
+    console.log("Scriptet körs!");
+    listCourses();
+};
+const listCourses = (): void => {
+displayCourses(courses);
+};
+
+const displayCourses = (courses: Array<ICourse>) => {
+    const app = document.querySelector("#courses") as HTMLDivElement;
+
+    if (!app) {
+        console.error("Elementet #courses hittades inte!");
+        return;
     }
 
-    // Loopa genom alla kurser och skapa HTML för varje kurs
-    courses.forEach(course => {
-      // Skapa en ny div för varje kurs
-      const courseElement = document.createElement('div');
-      courseElement.classList.add('course');
-      
-      // Lägg till kursinnehåll
-      courseElement.innerHTML = `
-        <img src="${course.image}" alt="${course.title}" class="course-image">
-        <h2>${course.title}</h2>
-        <p><strong>Kursnummer:</strong> ${course.number}</p>
-        <p><strong>Beskrivning:</strong> ${course.description}</p>
-        <p><strong>Lärare:</strong> ${course.teacher}</p>
-      `;
+    app.innerHTML = '';
 
-      // Lägg till kursen i courses-container
-      coursesContainer.appendChild(courseElement);
-    });
-  })
-  .catch(error => {
-    console.error("Det gick inte att hämta kurser från db.json:", error);
-  });
+
+    for(let course of courses)  {
+        const div = document.createElement('div');
+        const imageAnchor = document.createElement('a');
+        const image = document.createElement('img');
+        const cardBody = document.createElement('div');
+        const heading = document.createElement('h5');
+        const p = document.createElement('p');
+        const small = document.createElement('small');
+
+        div.classList.add("card");
+        imageAnchor.href = `.pages/course-details.html?id=${course.id}`;
+        image.alt = `${course.title}`;
+        image.src = course.image 
+        ? `/src/assets/images/${course.image}` 
+        : '/src/assets/images/default.png';
+        imageAnchor.appendChild(image);
+        div.appendChild(imageAnchor);
+        app.appendChild(div);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', initApp);

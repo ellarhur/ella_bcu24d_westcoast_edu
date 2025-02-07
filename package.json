@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:server": "json-server --watch db.json --port 3000",
-    "start:app": "live-server --no-browser"
+    "dev": "tsc --watch"
   },
   "dependencies": {
     "cors": "^2.8.5",
