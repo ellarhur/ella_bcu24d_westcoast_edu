@@ -287,3 +287,17 @@ input, textarea, select {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+.about{
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  width:900px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
