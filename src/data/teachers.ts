@@ -1,13 +1,13 @@
 import { ITeacher } from "../models/ITeacher.js";
 
-export const courses: ITeacher [] =
+export const teachers: ITeacher [] =
     [
         {
             "name": "Anna Forsberg",
             "subject": "Webbutveckling & UX/UI-design",
             "classroom": true,
             "online": true,
-            "image": "/images/teacher1.png",
+            "image": "/images/teacher1.jpg",
             "description": "En engagerad lärare med fokus på HTML, CSS och JavaScript. Hon älskar att lära ut modern design och tillgänglighet på webben."
         },
         {
@@ -15,7 +15,7 @@ export const courses: ITeacher [] =
             "subject": "Systemutveckling & Databaser",
             "classroom": true,
             "online": false,
-            "image": "/images/teacher2.png",
+            "image": "/images/teacher2.jpg",
             "description": "Har en bakgrund som backend-utvecklare och lär studenter att bygga robusta system med SQL, NoSQL och API:er."
         },
         {
@@ -23,7 +23,7 @@ export const courses: ITeacher [] =
             "subject": "Cybersäkerhet & Nätverkssäkerhet",
             "classroom": false,
             "online": true,
-            "image": "/images/teacher3.png",
+            "image": "/images/teacher4.png",
             "description": "Expert på penetrationstester och säker programmering. Brinner för att utbilda studenter i att skydda system från cyberattacker."
         },
         {
@@ -31,7 +31,7 @@ export const courses: ITeacher [] =
             "subject": "Programmering i Python & Java",
             "classroom": true,
             "online": true,
-            "image": "/images/teacher4.png",
+            "image": "/images/teacher3.jpg",
             "description": "Har arbetat som mjukvaruutvecklare i 15 år. Gör kodning roligt genom att bygga små spel och AI-projekt i undervisningen."
         },
         {
@@ -51,7 +51,7 @@ export const courses: ITeacher [] =
             "description": "Hjälper studenter att förstå Scrum, Kanban och hur man effektivt leder IT-projekt i företag."
         },
         {
-            "name": "Elin Karlsson",
+            "name": "Elon Karlsson",
             "subject": "Mobilapp-utveckling (Android & iOS)",
             "classroom": true,
             "online": true,
@@ -67,7 +67,7 @@ export const courses: ITeacher [] =
             "description": "Lär ut AWS, Docker och Kubernetes. Hjälper studenter att förstå hur man bygger skalbara system i molnet."
         },
         {
-            "name": "Camilla Sundberg",
+            "name": "Cameron Sundberg",
             "subject": "Spelutveckling & 3D-grafik",
             "classroom": false,
             "online": true,

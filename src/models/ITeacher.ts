@@ -1,6 +1,6 @@
 export interface ITeacher{
     name: string;
-    subject: number;
+    subject: string;
     classroom: boolean;
     online: boolean;
     image: string;
