@@ -114,8 +114,14 @@ body{
   text-align: center;
 }
 
-/* Stil för varje kurs */
-.course {
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.coursecard {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -124,50 +130,26 @@ body{
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.course:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.course h3 {
-  font-size: 1.5em;
-  font-family: "Bebas Neue", serif;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.course p {
-  font-size: 1em;
-  font-family: 'Montserrat', sans-serif;
-  color: #555;
-  line-height: 1.5;
-}
-
-.course img {
+.coursecard img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-.course-details {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.course-image-container {
-  text-align:center;
-
-}
-
-#course-image {
-  max-width:500px;
   text-align:center;
   border-radius:8px;
+}
+.coursecard-body {
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.coursecard:hover {
+  transform: scale(1.08);
+  background: #000;
+  color:#fff;
+}
+
+.small{
+  text-align:center;
+    white-space: pre-line;
+
 }
 
 button {
@@ -250,12 +232,6 @@ button {
 .course-details {
   margin-top: 10px;
   display: none;
-}
-
-.course-image {
-  max-width: 500px;
-  height: auto;
-  margin-bottom: 10px;
 }
 
 .student-list {
