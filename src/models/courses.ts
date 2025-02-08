@@ -30,7 +30,7 @@ const displayCourses = (courses: Array<ICourse>) => {
         const small = document.createElement('small');
 
         div.classList.add("coursecard");
-        imageAnchor.href = `.pages/course-details.html?id=${course.id}`;
+        imageAnchor.href = `/src/pages/course-details.html?id=${course.id}`;
         image.alt = `${course.title}`;
         image.src = course.image 
         ? `/src/assets${course.image}` 
