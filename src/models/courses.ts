@@ -33,11 +33,12 @@ const displayCourses = (courses: Array<ICourse>) => {
         imageAnchor.href = `.pages/course-details.html?id=${course.id}`;
         image.alt = `${course.title}`;
         image.src = course.image 
-        ? `/src/assets/images/${course.image}` 
-        : '/src/assets/images/default.png';
-        imageAnchor.appendChild(image);
-        div.appendChild(imageAnchor);
-        app.appendChild(div);
+        ? `/src/assets${course.image}` 
+        : '/src/assets/default.png';
+        // imageAnchor.appendChild(image);
+        // div.appendChild(imageAnchor);
+        // app.appendChild(div);
+        
     }
 };
 
