@@ -9,13 +9,13 @@ export const listCourses = async () => {
 };
 export { courses };
 const initApp = () => {
-    console.log("Scriptet körs!");
+    console.log('Scriptet körs!');
     listCourses();
 };
 const displayCourses = (courses) => {
-    const app = document.querySelector("#courses");
+    const app = document.querySelector('#courses');
     if (!app) {
-        console.error("Elementet #courses hittades inte!");
+        console.error('Elementet #courses hittades inte!');
         return;
     }
     app.innerHTML = '';
@@ -27,7 +27,7 @@ const displayCourses = (courses) => {
         const heading = document.createElement('h3');
         const p = document.createElement('p');
         const small = document.createElement('small');
-        div.classList.add("coursecard");
+        div.classList.add('coursecard');
         imageAnchor.href = `/src/pages/course-details.html?id=${course.id}`;
         image.alt = `${course.title}`;
         image.src = course.image
@@ -41,7 +41,9 @@ const displayCourses = (courses) => {
         const dateText = document.createElement('p');
         dateText.textContent = `Datum för kursen: ${course.dates}`;
         const classroomText = document.createElement('p');
-        classroomText.textContent = `${course.classroom ? "Kursen hålls på plats & kan ses i efterhand online" : "Kursen är endast online"}`;
+        classroomText.textContent = `${course.classroom
+            ? 'Kursen hålls på plats & kan ses i efterhand online'
+            : 'Kursen är endast online'}`;
         const priceText = document.createElement('p');
         priceText.textContent = `Kostnad: ${course.price}`;
         small.appendChild(dateText);

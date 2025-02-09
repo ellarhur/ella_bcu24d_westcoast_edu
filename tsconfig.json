@@ -8,6 +8,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src", "src/data/courses.ts", "src/models/storage.ts"],
+  "include": ["src", "src/data/courses.ts"],
   "exclude": ["node_modules"]
 }

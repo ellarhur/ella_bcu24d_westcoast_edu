@@ -25,5 +25,5 @@ window.onload = function () {
 function logout() {
     clearBookings();
     window.location.href = 'index.html';
-    console.log("hej");
+    console.log('hej');
 }

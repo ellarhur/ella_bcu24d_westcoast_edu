@@ -2,7 +2,7 @@ import { teachers } from '../data/teachers.js';
 import { ITeacher } from '../models/ITeacher.js'
 
 const initApp = () => {
-    console.log("Scriptet körs!");
+    console.log("Det här funkar!");
     listTeachers();
 };
 

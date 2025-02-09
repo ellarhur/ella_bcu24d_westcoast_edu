@@ -1,9 +1,8 @@
-export interface ITeacher{
-    id: string;
-    subject: string;
-    classroom: boolean;
-    online: boolean;
-    image: string;
-    description:string;
- 
+export interface ITeacher {
+  id: string;
+  subject: string;
+  classroom: boolean;
+  online: boolean;
+  image: string;
+  description: string;
 }

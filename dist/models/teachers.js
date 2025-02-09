@@ -1,6 +1,6 @@
 import { teachers } from '../data/teachers.js';
 const initApp = () => {
-    console.log("Scriptet körs!");
+    console.log("Det här funkar!");
     listTeachers();
 };
 const listTeachers = () => {

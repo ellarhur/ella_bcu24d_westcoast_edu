@@ -22,7 +22,7 @@ export class HttpClient {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data),
             });
             if (!response.ok) {
                 throw new Error(`POST failed: ${response.status} ${response.statusText}`);
