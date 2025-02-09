@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,385;1,385&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../../dist/models/account.js"></script>
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <title>Westcoast Education</title>
+</head>
+<header>
+    <div class="login">
+        <button onclick="window.location.href='index.html';" type="button">Logga ut</button>
+        <button onclick="window.location.href='account.html';" type="button">Mitt konto</button></div>
+        <h1><a href="../pages/index.html">Westcoast Education</a></h1>
+        <nav><ul>
+    <li><a href="../pages/about.html">Om oss</a></li>
+    <li><a href="../pages/teachers.html">Utbildningsteam</a></li>
+    <li><a href="../pages/courses.html">Våra kurser</a></li>
+    <li><a href="../pages/chat.html">Chattforum</a></li>
+</ul></nav>
+</header>
+<body>
+
+
+<h2>Mina kurser</h2>
+<p>Här kan du hantera dina bokade kurser.</p>
+<div id="bookedCourses"></div>
+
+<button onclick="logout()">Logga ut</button>
+
+</body>
+</html>

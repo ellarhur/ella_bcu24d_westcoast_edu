@@ -13,8 +13,8 @@
 </head>
 <header>
     <div class="login">
-        <button onclick="window.location.href='log-sign.html';" type="button">Logga in</button>
-        <button onclick="window.location.href='log-sign.html';" type="button">Skapa konto</button></div>
+        <button onclick="window.location.href='index.html';" type="button">Logga ut</button>
+        <button onclick="window.location.href='account.html';" type="button">Mitt konto</button></div>
         <h1><a href="../pages/index.html">Westcoast Education</a></h1>
         <nav><ul>
     <li><a href="../pages/about.html">Om oss</a></li>
@@ -28,95 +28,62 @@
 
 <h2>Välkommen, Student</h2>
 <p>Här kan du boka kurser och se din kursstatus.</p>
-<main class="container mx-auto px-4 py-8">
+<main class="container">
 
-    <section class="mb-8">
-        <h1 class="course-title text-2xl font-bold mb-4"></h1>
-        <div class="course-details grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="course-info">
-                <p class="course-number mb-2"></p>
-                <p class="course-days mb-2"></p>
-                <p class="course-availability mb-2"></p>
-                <p class="course-dates mb-2"></p>
-            </div>
-            <div class="course-image">
-                <img src="" alt="Kursbild" class="w-full h-auto rounded-lg">
-            </div>
-        </div>
-    </section>
 
-    <div class="error-message hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"></div>
+    <form id="bookingForm">
 
-    <form id="bookingForm" class="max-w-2xl">
-        <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-bold mb-2">E-postadress *</label>
-            <input type="email" 
-                   id="email" 
-                   name="email" 
-                   required 
-                   class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-        </div>
+        <label for="course">Välj kurs från listan:</label>
+        <select name="course" id="course">
+            <option value="WEB101">WEB101 - Frontend Development</option>
+            <option value="WEB201">WEB201 - Backend Development</option>
+            <option value="WEB301">WEB301 - Fullstack Development</option>
+            <option value="DES101">DES101 - Introkurs till Figma och Adobe</option>
+            <option value="APP101">APP101 - Introkurs till apputveckling av iOS-appar</option>
+            <option value="APP102">APP102 - Introkurs till apputveckling av Android-appar</option>
+            <option value="AWS101">AWS101 - Arbeta med Molntjänster (AWS, Azure, Google Cloud)</option>
+            <option value="LAN101">LAN101 - Djupdyk i Python</option>
+            <option value="LAN201">LAN201 - Djupdyk i Java</option>
+            <option value="LAN301">LAN301 - Djupdyk i C#</option>
+            <option value="AI101">AI101 - Bli en proffsig AI prompt engineer</option>
+            <option value="AI201">AI201 - Programmera egna AI-verktyg</option>
+            <option value="NET101">NET101 - Grundläggande IT-säkerhet för nätverk</option>
+            <option value="NET201">NET201 - Etisk hackning och brandväggar</option>
+            <option value="COM101">COM101 - Gruppdynamik, GDPR och kontorsmiljön</option>
+            </select>
+        
+            <label for="email">Din email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="number">Ditt telefonnummer:</label>
+            <input type="number" id="number" name="number" required>
+        
+            <label for="adress">Din faktureringsadress:</label>
+            <input type="adress" id="adress" name="adress" required>
 
-        <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-bold mb-2">Namn *</label>
-            <input type="text" 
-                   id="name" 
-                   name="name" 
-                   required 
-                   class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-        </div>
+            <div class="classroom-option">
+                <input type="radio" 
+                       id="classroom" 
+                       name="bookingType" 
+                       value="classroom" 
+                       required 
+                       class="mr-2">
+                <label for="classroom">På plats</label>
+            <div class="distance-option">
+                <input type="radio" 
+                       id="distance" 
+                       name="bookingType" 
+                       value="distance" 
+                       required 
+                       class="mr-2">
+                <label for="distance">På distans och on-demand</label>
 
-        <div class="mb-4">
-            <label for="billingAddress" class="block text-gray-700 font-bold mb-2">Faktureringsadress *</label>
-            <textarea id="billingAddress" 
-                     name="billingAddress" 
-                     required 
-                     rows="3" 
-                     class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
-        </div>
-
-        <div class="mb-4">
-            <label for="phoneNumber" class="block text-gray-700 font-bold mb-2">Mobilnummer *</label>
-            <input type="tel" 
-                   id="phoneNumber" 
-                   name="phoneNumber" 
-                   required 
-                   class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-        </div>
-
-        <div class="mb-6">
-            <label class="block text-gray-700 font-bold mb-2">Jag vill gå på kursen:</label>
-            <div class="flex gap-4">
-                <div class="classroom-option">
-                    <input type="radio" 
-                           id="classroom" 
-                           name="bookingType" 
-                           value="classroom" 
-                           required 
-                           class="mr-2">
-                    <label for="classroom">På plats</label>
-                </div>
-                <div class="distance-option">
-                    <input type="radio" 
-                           id="distance" 
-                           name="bookingType" 
-                           value="distance" 
-                           required 
-                           class="mr-2">
-                    <label for="distance">På distans och on-demand</label>
-                </div>
-            </div>
-        </div>
-
-        <!-- Submit-knapp -->
-        <button type="submit" 
-                class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-            Boka kurs
-        </button>
+    </div>
+        
+        
+            <button onclick="window.location.href='account.html';" type="submit">Boka kurs</button>
     </form>
 </main>
-
-<button onclick="logout()">Logga ut</button>
 
 </body>
 </html>
