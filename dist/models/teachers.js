@@ -19,11 +19,14 @@ const displayTeachers = (teachers) => {
         const image = document.createElement('img');
         const teacherCardBody = document.createElement('div');
         const heading = document.createElement('h3');
-        const descriptionText = document.createElement('p'); // Skapa ett element för beskrivningen
+        const descriptionText = document.createElement('p');
         const small = document.createElement('small');
+        const hoverText = document.createElement('div');
+        hoverText.classList.add('hover-text');
+        hoverText.textContent = "Klicka på kortet för att logga in och ta kontakt med " + teacher.id;
         div.classList.add("teachercard");
-        imageAnchor.href = `.pages/teacher-details.html?id=${teacher.name}`;
-        image.alt = `${teacher.name}`;
+        imageAnchor.href = `/src/pages/log-sign.html`;
+        image.alt = `${teacher.id}`;
         image.src = teacher.image
             ? `/src/assets${teacher.image}`
             : `/src/assets/default.jpg`;
@@ -31,11 +34,12 @@ const displayTeachers = (teachers) => {
         div.appendChild(imageAnchor);
         teacherCardBody.classList.add('teachercard-body');
         heading.classList.add('teachercard-title');
-        heading.textContent = teacher.name;
-        descriptionText.textContent = teacher.description || "Ingen beskrivning tillgänglig"; // Säkerställ att det finns en beskrivning
+        heading.textContent = teacher.id;
+        descriptionText.textContent = teacher.description || "Ingen beskrivning tillgänglig";
         teacherCardBody.appendChild(heading);
         teacherCardBody.appendChild(descriptionText);
         div.appendChild(teacherCardBody);
+        div.appendChild(hoverText);
         app.appendChild(div);
     }
 };

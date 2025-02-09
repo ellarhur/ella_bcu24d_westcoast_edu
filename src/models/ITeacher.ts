@@ -1,5 +1,5 @@
 export interface ITeacher{
-    name: string;
+    id: string;
     subject: string;
     classroom: boolean;
     online: boolean;

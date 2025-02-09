@@ -242,7 +242,7 @@ button {
   list-style-type: square;
 }
 
-#addCourseForm, #applyCourse{
+.addCourseForm, .addTeacherForm{
   height:auto;
   text-align:left;
   font-size:1.3rem;
@@ -254,7 +254,7 @@ button {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   border:none;
   border-radius:8px;
-  width:400px;
+  width:700px;
 }
 
 .chat-container, .email-container {
@@ -296,7 +296,7 @@ input, textarea, select {
   border-radius: 8px;
   font-size: 1.5rem;
   width:900px;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: block;
@@ -344,6 +344,8 @@ input, textarea, select {
   color:#fff;
 }
 
+
+
 .small{
   text-align:center;
     white-space: pre-line;
@@ -372,14 +374,14 @@ input, textarea, select {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width:900px;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .course-details-top img{
@@ -403,4 +405,64 @@ input, textarea, select {
 h3{
   font-family: "Bebas Neue", serif;
   font-size: 2rem;
+}
+
+.goback{
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  width:400px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:20px;
+}
+
+/* styles.css */
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input:invalid, textarea:invalid {
+  border-color: #ff0000;
+}
+
+input:focus:invalid, textarea:focus:invalid {
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 0 1px #ff0000;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 1rem;
+  }
+  
+  form {
+      padding: 1rem;
+  }
+}
+
+.error-message {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }

@@ -26,7 +26,7 @@
 <body>
     
 <h2>Administrationssida för lärare</h2>
-<form id="addCourseForm">
+<form class="addCourseForm">
     <h2>Lägg till en ny kurs</h2>
     
     <label for="title">Kursnamn:</label>
@@ -41,32 +41,33 @@
     <label for="dates">Startdatum (komma-separerade):</label>
     <input type="text" id="dates" name="dates" placeholder="YYYY-MM-DD, YYYY-MM-DD" required>
 
-    <label for="classroom">Klassrumskurs:</label>
-    <input type="checkbox" id="classroom" name="classroom">
+    <label for="online">Endast onlinekurs:</label>
+    <input type="checkbox" id="online" name="online" checked>
 
     <label for="teacher">Välj lärare:</label>
 <select name="teacher" id="teacher">
-      <option value="Acey">Acey Desaay</option>
-      <option value="Elin">Ledsep Elin</option>
-      <option value="Michael">Michael "The flash" Gustavsson</option>
-      <option value="Ella">Ella Belle Åkesson</option>
+      <option value="Anna">Anna Forsberg</option>
+      <option value="Elin">Erik Lindström</option>
+      <option value="Sofia">Sofia Berglund</option>
+      <option value="Johan">Johan Ekström</option>
+      <option value="Lisa">Lisa Nygren</option>
+      <option value="Daniel">Daniel Sjöberg</option>
+      <option value="Elon">Elon Karlsson</option>
+      <option value="Magnus">Magnus Hellström</option>
+      <option value="Cameron">Cameron Sundberg</option>
+      <option value="Fredrik">Fredrik Norén</option>
     </select>
-    <label for="online">Onlinekurs:</label>
-    <input type="checkbox" id="online" name="online" checked>
 
     <button type="submit">Lägg till kurs</button>
 </form>
     
-<h1>Administrera Kurser</h1>
-</header>
+<h2>Lista över Kurser</h2>
+<div id="courseList"></div>
 
-<main>
-    <h2>Lista över Kurser</h2>
-    <div id="courseList"></div> <!-- Här fylls kurslistan dynamiskt -->
     <section class="admin-section">
-        <!-- Formulär för att lägga till lärare -->
-        <form id="addTeacherForm" class="admin-form">
-            <h3>Lägg till ny lärare</h3>
+
+        <form class="addTeacherForm">
+            <h2>Lägg till ny lärare</h2>
             <label for="teacherName">Namn:</label>
             <input type="text" id="teacherName" required>
             
@@ -78,10 +79,12 @@
             
             <button type="submit">Lägg till lärare</button>
         </form>
+        <h2>Lista över lärare</h2>
+        <div id="teacherList"></div>
     
         <!-- Sektion för studenthantering -->
         <div class="student-management">
-            <h3>Hantera studenter</h3>
+            <h2>Hantera studenter</h2>
             <div id="studentList"></div>
         </div>
     </section>

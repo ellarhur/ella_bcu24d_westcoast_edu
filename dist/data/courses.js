@@ -24,7 +24,7 @@ export const courses = [
         image: "/images/kurs2.png",
         dates: ["2025-03-20 – 2025-04-05"],
         students: ["Hannah", "Isabella", "Jenny", "Johnny", "Leah", "Omar", "Fanny"],
-        average: "A",
+        average: "D",
         price: "3500 SEK",
         teacher: "Fredrik Norén",
         description: "Djupdyk i serverhantering, databaser och API-utveckling."
@@ -39,7 +39,7 @@ export const courses = [
         image: "/images/kurs3.png",
         dates: ["2025-04-10 – 2025-05-10"],
         students: ["Jenny", "Johnny", "Leah", "Dennis", "Omar", "Fanny"],
-        average: "A",
+        average: "C",
         price: "7000 SEK",
         teacher: "Anna Forsberg",
         description: "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
@@ -54,7 +54,7 @@ export const courses = [
         image: "/images/kurs4.png",
         dates: ["2025-02-15 – 2025-02-17"],
         students: ["George", "Hannah", "Isabella", "Leah", "Dennis"],
-        average: "A",
+        average: "B",
         price: "1500 SEK",
         teacher: "Sofia Berglund",
         description: "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
@@ -84,7 +84,7 @@ export const courses = [
         image: "/images/kurs6.png",
         dates: ["2025-03-12 – 2025-03-14"],
         students: ["Mandy", "George", "Hannah", "Isabella", "George", "Dennis", "Omar", "Fanny", "Fia"],
-        average: "A",
+        average: "E",
         price: "1500 SEK",
         teacher: "Johan Ekström",
         description: "Bygg Android-applikationer med det kraftfulla språket Kotlin."
@@ -114,7 +114,7 @@ export const courses = [
         image: "/images/kurs8.png",
         dates: ["2025-06-01 – 2025-07-01"],
         students: ["Martin", "Johnny", "Leah", "Dennis", "Omar", "Fanny"],
-        average: "A",
+        average: "D",
         price: "7000 SEK",
         teacher: "Lisa Nygren",
         description: "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
@@ -129,7 +129,7 @@ export const courses = [
         image: "/images/kurs9.png",
         dates: ["2025-07-05 – 2025-08-05"],
         students: ["Fia", "Martin", "Lenny"],
-        average: "A",
+        average: "G",
         price: "7000 SEK",
         teacher: "Elon Karlsson",
         description: "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
@@ -144,7 +144,7 @@ export const courses = [
         image: "/images/kurs10.png",
         dates: ["2025-08-10 – 2025-09-10"],
         students: ["Jenny", "Johnny", "Leah", "Dennis", "Omar", "Fanny", "Fia", "Martin", "Lenny"],
-        average: "A",
+        average: "B",
         price: "7000 SEK",
         teacher: "Cameron Sundberg",
         description: "Bygg robusta företagsapplikationer med Microsofts ramverk."
@@ -159,7 +159,7 @@ export const courses = [
         image: "/images/kurs11.png",
         dates: ["2025-04-01 – 2025-04-03"],
         students: ["George", "Hannah", "Fia", "Martin", "Lenny", "Omar", "Fanny"],
-        average: "A",
+        average: "E",
         price: "1500 SEK",
         teacher: "Fredrik Norén",
         description: "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
@@ -174,7 +174,7 @@ export const courses = [
         image: "/images/kurs12.png",
         dates: ["2025-04-10 – 2025-04-12"],
         students: ["George", "Hannah", "Isabella"],
-        average: "A",
+        average: "D",
         price: "1500 SEK",
         teacher: "Fredrik Norén",
         description: "För dig som är klar med webbapplikationer och vill jobba med AI!"
@@ -189,7 +189,7 @@ export const courses = [
         image: "/images/kurs13.png",
         dates: ["2025-09-15 – 2025-09-22"],
         students: ["George", "Hannah", "Isabella"],
-        average: "A",
+        average: "C",
         price: "2500 SEK",
         teacher: "Daniel Sjöberg",
         description: "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
@@ -204,7 +204,7 @@ export const courses = [
         image: "/images/kurs14.jpg",
         dates: ["2025-09-25 – 2025-10-02"],
         students: ["George", "Hannah", "Fia", "Martin", "Lenny"],
-        average: "A",
+        average: "B",
         price: "2500 SEK",
         teacher: "Daniel Sjöberg",
         description: "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
@@ -213,7 +213,7 @@ export const courses = [
         id: 15,
         title: "Gruppdynamik, GDPR och kontorsmiljön",
         number: "COM101",
-        days: 1,
+        days: 2,
         classroom: false,
         online: true,
         image: "/images/kurs15.png",
@@ -222,6 +222,6 @@ export const courses = [
         average: "A",
         price: "3500 SEK",
         teacher: "Erik Lindström",
-        description: "En-dagsföreläsning för elever inom IT-sektorn för att förbättra arbetsmiljön i framtida yrken"
+        description: "Två-dagarsföreläsning för elever inom IT-sektorn för att förbättra arbetsmiljön i framtida yrken"
     }
 ];
