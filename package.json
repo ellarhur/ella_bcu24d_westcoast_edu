@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "server": "npx json-server db.json"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "json-server": "^1.0.0-beta.3",
     "live-server": "^1.2.1"
   },
   "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
     "typescript": "^5.7.3"
   }
 }

@@ -5,8 +5,14 @@ const initApp = () => {
     console.log("Scriptet körs!");
     listCourses();
 };
-const listCourses = (): void => {
+const listCourses = async(): Promise<void> => {
+const url = 'http://localhost:3000/courses';
+const result = await fetch(url);
+if(result.ok) {
+    const courses = (await result.json()) as ICourse[];
+
 displayCourses(courses);
+}
 };
 
 const displayCourses = (courses: Array<ICourse>) => {

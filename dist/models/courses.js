@@ -1,10 +1,14 @@
-import { courses } from '../data/courses.js';
 const initApp = () => {
     console.log("Scriptet körs!");
     listCourses();
 };
-const listCourses = () => {
-    displayCourses(courses);
+const listCourses = async () => {
+    const url = 'http://localhost:3000/courses';
+    const result = await fetch(url);
+    if (result.ok) {
+        const courses = (await result.json());
+        displayCourses(courses);
+    }
 };
 const displayCourses = (courses) => {
     const app = document.querySelector("#courses");
@@ -49,3 +53,4 @@ const displayCourses = (courses) => {
     }
 };
 document.addEventListener('DOMContentLoaded', initApp);
+export {};
