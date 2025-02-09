@@ -1,19 +1,55 @@
-// import { ICourseDetails } from '../models/ICourseDetails.js';
-// import { ICourse } from '../models/ICourse.js';
-// import { createDetailsDisplay, createOverlay } from '../utilities/dom.js';
+import { ICourseDetails } from '../models/ICourseDetails.js';
 
-// const initApp = () => {
-//   const id = location.search.split('=')[1];
-//   findCourse(id).then((Course) => displayCourse(Course));
-// };
+const initCourseDetails = async () => {
+    console.log("Laddar kursdetaljer...");
 
-// const displayCourse = (Course: ICourseDetails) => {
-//   document.querySelector('#details')?.appendChild(createDetailsDisplay(Course));
-//   document
-//     .querySelector('#details')
-//     ?.appendChild(createOverlay(Course.background));
-// };
+    // Hämta kurs-ID från URL:en
+    const params = new URLSearchParams(window.location.search);
+    const courseId = params.get("id");
 
-// const displayError = () => {};
+    if (!courseId) {
+        console.error("Inget kurs-ID hittades i URL:en!");
+        return;
+    }
 
-// document.addEventListener('DOMContentLoaded', initApp);
+    // Hämta kursdetaljer
+    const url = `http://localhost:3000/courses/${courseId}`;
+    const result = await fetch(url);
+
+    if (!result.ok) {
+        console.error("Misslyckades att hämta kursinformationen.");
+        return;
+    }
+
+    const course = (await result.json()) as ICourseDetails;
+    displayCourseDetails(course);
+};
+
+const displayCourseDetails = (course: ICourseDetails) => {
+    const app = document.querySelector("#course-details") as HTMLDivElement;
+
+    if (!app) {
+        console.error("Elementet #course-details hittades inte!");
+        return;
+    }
+
+    app.innerHTML = `
+        <div class="course-details-card">
+            <img src="${course.image ? `/src/assets${course.image}` : '/src/assets/default.jpg'}" alt="${course.title}">
+            <h1>${course.title}</h1>
+            <p><strong>Kursnummer:</strong> ${course.number}</p>
+            <p><strong>Datum:</strong> ${course.dates.join(', ')}</p>
+            <p><strong>Längd:</strong> ${course.days} dagar</p>
+            <p><strong>Plats:</strong> ${course.classroom ? "På plats" : "Endast online"}</p>
+            <p><strong>Pris:</strong> ${course.price} SEK</p>
+            <p><strong>Lärare:</strong> ${course.teacher}</p>
+            <p><strong>Beskrivning:</strong> ${course.description}</p>
+            <p><strong>Antal studenter:</strong> ${course.students.length}</p>
+            <p><strong>Snittbetyg:</strong> ${course.average}</p>
+            <a href="/index.html">Tillbaka</a>
+        </div>
+    `;
+};
+
+// Kör funktionen när sidan laddas
+document.addEventListener("DOMContentLoaded", initCourseDetails);

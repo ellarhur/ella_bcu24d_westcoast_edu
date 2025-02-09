@@ -39,7 +39,7 @@ const displayCourses = (courses) => {
         const dateText = document.createElement('p');
         dateText.textContent = `Datum för kursen: ${course.dates}`;
         const classroomText = document.createElement('p');
-        classroomText.textContent = `${course.classroom ? "Kursen hålls på plats" : "Kursen är endast online"}`;
+        classroomText.textContent = `${course.classroom ? "Kursen hålls på plats & kan ses i efterhand online" : "Kursen är endast online"}`;
         const priceText = document.createElement('p');
         priceText.textContent = `Kostnad: ${course.price}`;
         small.appendChild(dateText);
