@@ -1,14 +1,16 @@
-const initApp = () => {
-    console.log("Scriptet körs!");
-    listCourses();
-};
-const listCourses = async () => {
+let courses = [];
+export const listCourses = async () => {
     const url = 'http://localhost:3000/courses';
     const result = await fetch(url);
     if (result.ok) {
-        const courses = (await result.json());
+        courses = (await result.json());
         displayCourses(courses);
     }
+};
+export { courses };
+const initApp = () => {
+    console.log("Scriptet körs!");
+    listCourses();
 };
 const displayCourses = (courses) => {
     const app = document.querySelector("#courses");
@@ -53,4 +55,3 @@ const displayCourses = (courses) => {
     }
 };
 document.addEventListener('DOMContentLoaded', initApp);
-export {};

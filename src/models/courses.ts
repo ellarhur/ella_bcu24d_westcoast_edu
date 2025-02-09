@@ -1,18 +1,22 @@
-import { courses } from '../data/courses.js';
-import { ICourse } from '../models/ICourse.js'
+import { ICourse } from '../models/ICourse.js';
+
+let courses: ICourse[] = [];
+
+export const listCourses = async (): Promise<void> => {
+    const url = 'http://localhost:3000/courses';
+    const result = await fetch(url);
+
+    if (result.ok) {
+        courses = (await result.json()) as ICourse[];
+        displayCourses(courses);
+    }
+};
+
+export { courses };
 
 const initApp = () => {
     console.log("Scriptet körs!");
     listCourses();
-};
-const listCourses = async(): Promise<void> => {
-const url = 'http://localhost:3000/courses';
-const result = await fetch(url);
-if(result.ok) {
-    const courses = (await result.json()) as ICourse[];
-
-displayCourses(courses);
-}
 };
 
 const displayCourses = (courses: Array<ICourse>) => {
@@ -25,8 +29,7 @@ const displayCourses = (courses: Array<ICourse>) => {
 
     app.innerHTML = '';
 
-
-    for(let course of courses)  {
+    for (let course of courses) {
         const div = document.createElement('div');
         const imageAnchor = document.createElement('a');
         const image = document.createElement('img');
@@ -39,9 +42,9 @@ const displayCourses = (courses: Array<ICourse>) => {
         imageAnchor.href = `/src/pages/course-details.html?id=${course.id}`;
         image.alt = `${course.title}`;
         image.src = course.image 
-        ? `/src/assets${course.image}` 
-        : `/src/assets/default.jpg`;
-        
+            ? `/src/assets${course.image}` 
+            : `/src/assets/default.jpg`;
+
         imageAnchor.appendChild(image);
         div.appendChild(imageAnchor);
 
@@ -67,7 +70,6 @@ const displayCourses = (courses: Array<ICourse>) => {
         coursecardBody.appendChild(p);
         div.appendChild(coursecardBody);
         app.appendChild(div);
-
     }
 };
 

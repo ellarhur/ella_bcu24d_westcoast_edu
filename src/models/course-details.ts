@@ -1,55 +1,42 @@
-import { ICourseDetails } from '../models/ICourseDetails.js';
+import { courses, listCourses } from "../models/courses.js";
+import { ICourse } from "../models/ICourse.js";
 
-const initCourseDetails = async () => {
-    console.log("Laddar kursdetaljer...");
+const initApp = () => {
+    findCourse();
+}
 
-    // Hämta kurs-ID från URL:en
-    const params = new URLSearchParams(window.location.search);
-    const courseId = params.get("id");
+const findCourse = (): void => {
+    const id = location.search.split("=")[1];
+    const course = courses.find(c => c.id === +id);
+    console.log(courses);
 
-    if (!courseId) {
-        console.error("Inget kurs-ID hittades i URL:en!");
-        return;
+    if (course) {
+    displayCourse(course);
+    } else {
+        displayError();
     }
-
-    // Hämta kursdetaljer
-    const url = `http://localhost:3000/courses/${courseId}`;
-    const result = await fetch(url);
-
-    if (!result.ok) {
-        console.error("Misslyckades att hämta kursinformationen.");
-        return;
-    }
-
-    const course = (await result.json()) as ICourseDetails;
-    displayCourseDetails(course);
 };
 
-const displayCourseDetails = (course: ICourseDetails) => {
-    const app = document.querySelector("#course-details") as HTMLDivElement;
 
-    if (!app) {
-        console.error("Elementet #course-details hittades inte!");
-        return;
+
+const displayCourse = (course:ICourse) => {
+    const div = document.createElement('div');
+
+    div.innerHTML = `
+    <div class="course-details-top">
+    <div>
+    ${
+        course.image ? `<img src="${course.image}" alt="${course.title}"/>`
+        :``
     }
-
-    app.innerHTML = `
-        <div class="course-details-card">
-            <img src="${course.image ? `/src/assets${course.image}` : '/src/assets/default.jpg'}" alt="${course.title}">
-            <h1>${course.title}</h1>
-            <p><strong>Kursnummer:</strong> ${course.number}</p>
-            <p><strong>Datum:</strong> ${course.dates.join(', ')}</p>
-            <p><strong>Längd:</strong> ${course.days} dagar</p>
-            <p><strong>Plats:</strong> ${course.classroom ? "På plats" : "Endast online"}</p>
-            <p><strong>Pris:</strong> ${course.price} SEK</p>
-            <p><strong>Lärare:</strong> ${course.teacher}</p>
-            <p><strong>Beskrivning:</strong> ${course.description}</p>
-            <p><strong>Antal studenter:</strong> ${course.students.length}</p>
-            <p><strong>Snittbetyg:</strong> ${course.average}</p>
-            <a href="/index.html">Tillbaka</a>
         </div>
+    </div>
     `;
+
+    document.querySelector('#course-details')?.appendChild(div);
+
 };
 
-// Kör funktionen när sidan laddas
-document.addEventListener("DOMContentLoaded", initCourseDetails);
+const displayError = () => { };
+
+document.addEventListener('DOMContentLoaded', initApp);

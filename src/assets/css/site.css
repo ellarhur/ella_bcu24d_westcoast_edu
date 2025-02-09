@@ -347,3 +347,20 @@ input, textarea, select {
     white-space: pre-line;
 
 }
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* movie details page media query*/
+@media (min-width: 768px) {
+  #details .details-top {
+    flex-direction: row;
+  }
+}
