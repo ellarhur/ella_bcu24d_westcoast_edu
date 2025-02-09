@@ -269,6 +269,8 @@ button {
 
 h2 {
   color: #333;
+  font-family: "Bebas Neue", serif;
+font-size: 4rem;
 }
 
 #chat-box {
@@ -363,4 +365,42 @@ input, textarea, select {
   #details .details-top {
     flex-direction: row;
   }
+}
+
+
+.course-details-top{
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  width:900px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.course-details-top img{
+  width: 100%;
+  text-align:center;
+  border-radius:8px;
+}
+
+.container{
+  padding:20px;
+}
+
+.interest{
+  width:900px;
+  padding:20px;
+  margin-top:20px;
+  background-color: #000;
+  color:#fff;
+}
+
+h3{
+  font-family: "Bebas Neue", serif;
+  font-size: 2rem;
 }
