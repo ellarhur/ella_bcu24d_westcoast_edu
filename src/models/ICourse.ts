@@ -7,7 +7,6 @@ export interface ICourse {
   online: boolean;
   image: string;
   dates: string[];
-  students: string[];
   average: string;
   price: string;
   teacher: string;

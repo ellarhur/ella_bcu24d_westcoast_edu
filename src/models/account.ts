@@ -1,31 +1,33 @@
-import { getBookings, clearBookings } from '../models/localstorage.js';
-
-window.onload = function () {
-  const bookings = getBookings();
-  const bookedCoursesDiv = document.getElementById('bookedCourses');
-
-  if (bookings.length > 0 && bookedCoursesDiv) {
-    bookings.forEach((booking, index) => {
-      const courseDiv = document.createElement('div');
-      courseDiv.innerHTML = `
-                <h3>Kurs: ${booking.course}</h3>
-                <p>Email: ${booking.email}</p>
-                <p>Telefon: ${booking.number}</p>
-                <p>Adress: ${booking.adress}</p>
-                <p>Bokningstyp: ${booking.bookingType}</p>
-                <hr>
-            `;
-      bookedCoursesDiv.appendChild(courseDiv);
-    });
-  } else {
-    if (bookedCoursesDiv) {
-      bookedCoursesDiv.innerHTML = '<p>Du har inga bokade kurser.</p>';
+const loadAccount = () => {
+    const studentData = localStorage.getItem("loggedInStudent");
+    if (!studentData) {
+        alert("Du är inte inloggad!");
+        window.location.href = "/login.html";
+        return;
     }
-  }
+
+    const student = JSON.parse(studentData);
+    document.querySelector("#studentName")!.textContent = student.name;
+
+    const bookingsList = document.querySelector("#bookings") as HTMLDivElement;
+    bookingsList.innerHTML = "";
+
+    if (student.bookings.length === 0) {
+        bookingsList.innerHTML = "<p>Du har inga bokade kurser.</p>";
+        return;
+    }
+
+    student.bookings.forEach((booking: { courseId: string; courseName: string; teacher: string }) => {
+        const div = document.createElement("div");
+        div.classList.add("booking-card");
+        div.innerHTML = `
+            <h3>${booking.courseName}</h3>
+            <p>Handledare: ${booking.teacher}</p>
+            <small>Kurskod: ${booking.courseId}</small>
+        `;
+        bookingsList.appendChild(div);
+    });
 };
 
-function logout() {
-  clearBookings();
-  window.location.href = 'index.html';
-  console.log('hej');
-}
+// Ladda kontosidan när den öppnas
+document.addEventListener("DOMContentLoaded", loadAccount);

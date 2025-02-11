@@ -1,20 +1,19 @@
-const loginForm = document.querySelectorAll('.loginForm')[0];
-const registerForm = document.querySelectorAll('.loginForm')[1];
-
-console.log("loginForm:", loginForm);
-console.log("registerForm:", registerForm);
+const loginForm = document.querySelector('.loginForm') as HTMLFormElement;
+const registerForm = document.querySelector('.registerForm') as HTMLFormElement;
 
 if (loginForm && registerForm) {
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log("Inloggning formulär skickat!");
 
         const usernameLogin = (document.getElementById('usernameLogin') as HTMLInputElement).value;
         const passwordLogin = (document.getElementById('passwordLogin') as HTMLInputElement).value;
 
-        const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
 
-        if (storedUser && usernameLogin === storedUser.username && passwordLogin === storedUser.password) {
+        const user = users.find((u: any) => u.username === usernameLogin && u.password === passwordLogin);
+
+        if (user) {
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
             window.location.href = 'student.html';
         } else {
             document.getElementById('error')!.textContent = 'Fel användarnamn eller lösenord.';
@@ -23,23 +22,33 @@ if (loginForm && registerForm) {
 
     registerForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log("Registrering formulär skickat!");
 
         const usernameRegister = (document.getElementById('usernameRegister') as HTMLInputElement).value;
         const passwordRegister = (document.getElementById('passwordRegister') as HTMLInputElement).value;
 
-        console.log('Försöker skapa konto med:', usernameRegister, passwordRegister);
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
 
-        const user = {
-            username: usernameRegister,
-            password: passwordRegister
-        };
+        if (users.find((u: any) => u.username === usernameRegister)) {
+            alert('Användarnamnet är redan taget.');
+            return;
+        }
 
-        localStorage.setItem('user', JSON.stringify(user));
+        const user = { username: usernameRegister, password: passwordRegister, bookings: [] };
+        users.push(user);
+
+        localStorage.setItem('users', JSON.stringify(users));
 
         alert('Ditt konto har skapats! Du kan nu logga in.');
         window.location.href = 'log-sign.html';
     });
-} else {
-    console.error('Formulär ej hittade i DOM!');
 }
+const login = (email: string, password: string) => {
+    const student = students.find(s => s.email === email && s.password === password);
+
+    if (student) {
+        localStorage.setItem("loggedInStudent", JSON.stringify(student));
+        window.location.href = "/account.html"; // Skicka användaren till kontosidan
+    } else {
+        alert("Fel e-post eller lösenord!");
+    }
+};

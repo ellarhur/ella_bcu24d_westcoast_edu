@@ -13,34 +13,41 @@ const displayTeachers = (teachers) => {
         return;
     }
     app.innerHTML = '';
-    for (let teacher of teachers) {
-        const div = document.createElement('div');
-        const imageAnchor = document.createElement('a');
-        const image = document.createElement('img');
-        const teacherCardBody = document.createElement('div');
-        const heading = document.createElement('h3');
-        const descriptionText = document.createElement('p');
-        const small = document.createElement('small');
-        const hoverText = document.createElement('div');
-        hoverText.classList.add('hover-text');
-        hoverText.textContent = "Klicka på kortet för att logga in och ta kontakt med " + teacher.id;
-        div.classList.add("teachercard");
-        imageAnchor.href = `/src/pages/log-sign.html`;
-        image.alt = `${teacher.id}`;
-        image.src = teacher.image
-            ? `/src/assets${teacher.image}`
-            : `/src/assets/default.jpg`;
-        imageAnchor.appendChild(image);
-        div.appendChild(imageAnchor);
-        teacherCardBody.classList.add('teachercard-body');
-        heading.classList.add('teachercard-title');
-        heading.textContent = teacher.id;
-        descriptionText.textContent = teacher.description || "Ingen beskrivning tillgänglig";
-        teacherCardBody.appendChild(heading);
-        teacherCardBody.appendChild(descriptionText);
-        div.appendChild(teacherCardBody);
-        div.appendChild(hoverText);
-        app.appendChild(div);
-    }
+    teachers.forEach(teacher => {
+        const teacherCard = createTeacherCard(teacher);
+        app.appendChild(teacherCard);
+    });
+};
+const createTeacherCard = (teacher) => {
+    // Skapa huvudcontainer
+    const div = document.createElement('div');
+    div.classList.add("teachercard");
+    // Skapa klickbar bild
+    const imageAnchor = document.createElement('a');
+    imageAnchor.href = `/src/pages/log-sign.html`;
+    const image = document.createElement('img');
+    image.alt = `Bild på ${teacher.id}`;
+    image.src = teacher.image
+        ? `/src/assets${teacher.image}`
+        : `/src/assets/default.jpg`;
+    imageAnchor.appendChild(image);
+    div.appendChild(imageAnchor);
+    // Skapa kortets innehåll
+    const teacherCardBody = document.createElement('div');
+    teacherCardBody.classList.add('teachercard-body');
+    const heading = document.createElement('h3');
+    heading.classList.add('teachercard-title');
+    heading.textContent = teacher.id;
+    const descriptionText = document.createElement('p');
+    descriptionText.textContent = teacher.description || "Ingen beskrivning tillgänglig";
+    teacherCardBody.appendChild(heading);
+    teacherCardBody.appendChild(descriptionText);
+    div.appendChild(teacherCardBody);
+    // Skapa hover-text
+    const hoverText = document.createElement('div');
+    hoverText.classList.add('hover-text');
+    hoverText.textContent = `Klicka på kortet för att logga in och ta kontakt med ${teacher.id}`;
+    div.appendChild(hoverText);
+    return div;
 };
 document.addEventListener('DOMContentLoaded', initApp);
