@@ -27,11 +27,9 @@ const displayTeachers = (teachers: Array<ITeacher>): void => {
 };
 
 const createTeacherCard = (teacher: ITeacher): HTMLDivElement => {
-    // Skapa huvudcontainer
     const div = document.createElement('div');
     div.classList.add("teachercard");
 
-    // Skapa klickbar bild
     const imageAnchor = document.createElement('a');
     imageAnchor.href = `/src/pages/log-sign.html`;
 
@@ -44,7 +42,6 @@ const createTeacherCard = (teacher: ITeacher): HTMLDivElement => {
     imageAnchor.appendChild(image);
     div.appendChild(imageAnchor);
 
-    // Skapa kortets innehåll
     const teacherCardBody = document.createElement('div');
     teacherCardBody.classList.add('teachercard-body');
 

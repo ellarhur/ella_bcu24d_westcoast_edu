@@ -19,10 +19,8 @@ const displayTeachers = (teachers) => {
     });
 };
 const createTeacherCard = (teacher) => {
-    // Skapa huvudcontainer
     const div = document.createElement('div');
     div.classList.add("teachercard");
-    // Skapa klickbar bild
     const imageAnchor = document.createElement('a');
     imageAnchor.href = `/src/pages/log-sign.html`;
     const image = document.createElement('img');
@@ -32,7 +30,6 @@ const createTeacherCard = (teacher) => {
         : `/src/assets/default.jpg`;
     imageAnchor.appendChild(image);
     div.appendChild(imageAnchor);
-    // Skapa kortets innehåll
     const teacherCardBody = document.createElement('div');
     teacherCardBody.classList.add('teachercard-body');
     const heading = document.createElement('h3');
