@@ -12,7 +12,7 @@ const registerStudent = async (studentData) => {
         if (existingUser) {
             console.log("Användarnamnet finns redan! Försök med ett annat.");
             alert("Användarnamnet är redan taget, försök med ett annat.");
-            return; // Avbryt om användarnamnet redan finns
+            return;
         }
 
         const response = await fetch("http://localhost:3000/students", {
