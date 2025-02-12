@@ -736,6 +736,13 @@
           "teacher": "Erik Lindström"
         }
       ]
+    },
+    {
+      "id": "student1739393883186",
+      "name": "ella",
+      "email": "ella@gmail.com",
+      "password": "ella1",
+      "bookings": []
     }
   ],
   "teachers": [

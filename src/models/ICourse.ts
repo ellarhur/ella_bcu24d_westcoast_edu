@@ -12,3 +12,4 @@ export interface ICourse {
   teacher: string;
   description: string;
 }
+ 

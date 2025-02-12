@@ -26,47 +26,50 @@
 
 <h1>Logga in eller skapa konto för att boka kurser</h1>
 
-<form class="loginForm">
+<form class="loginForm" id="studentLoginForm">
   <h2>Logga in som elev</h2>
   <div class="form-group">
-      <label for="usernameLogin">Användarnamn</label>
-      <input type="text" id="usernameLogin" name="username" placeholder="Ange ditt användarnamn" required>
+      <label for="usernameLogin">E-postadress</label>
+      <input type="email" id="usernameLogin" name="email" placeholder="Ange din e-postadress" required>
   </div>
   <div class="form-group">
       <label for="passwordLogin">Lösenord</label>
       <input type="password" id="passwordLogin" name="password" placeholder="Ange ditt lösenord" required>
   </div>
-  <button type="submit"  onclick="window.location.href='account.html';">Logga in</button>
-  <p class="error" id="error"></p>
+  <button type="submit">Logga in</button>
+  <p class="error" id="studentLoginError"></p>
 </form>
-
 <form class="registerForm">
   <h2>Skapa konto som elev</h2>
   <div class="form-group">
-    <label for="usernameRegister">Användarnamn</label>
-    <input type="text" id="usernameRegister" name="username" placeholder="Skapa ett användarnamn" required>
+      <label for="nameRegister">Namn</label>
+      <input type="text" id="nameRegister" name="name" placeholder="Ange ditt namn" required>
   </div>
   <div class="form-group">
-    <label for="passwordRegister">Lösenord</label>
-    <input type="password" id="passwordRegister" name="password" placeholder="Skapa ett lösenord" required>
+      <label for="emailRegister">E-postadress</label>
+      <input type="email" id="emailRegister" name="email" placeholder="Ange din e-postadress" required>
+  </div>
+  <div class="form-group">
+      <label for="passwordRegister">Lösenord</label>
+      <input type="password" id="passwordRegister" name="password" placeholder="Skapa ett lösenord" required>
   </div>
   <button type="submit">Skapa konto</button>
-  <p class="error" id="error"></p>
+  <p class="error" id="registerError"></p>
 </form>
 
-    <form class="loginForm">
-        <h2>Inloggning för lärare & administrationen</h2>
-        <div class="form-group">
-          <label for="username">Användarnamn</label>
-          <input type="text" id="username" name="username" placeholder="Ange ditt användarnamn" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Lösenord</label>
-          <input type="password" id="password" name="password" placeholder="Ange ditt lösenord" required>
-        </div>
-        <button type="submit">Logga in</button>
-        <p class="error" id="error"></p>
-      </form>
+<form class="loginForm" id="adminLoginForm">
+  <h2>Inloggning för lärare & administration</h2>
+  <div class="form-group">
+      <label for="adminEmail">E-postadress</label>
+      <input type="email" id="adminEmail" name="email" placeholder="Ange din e-postadress" required>
+  </div>
+  <div class="form-group">
+      <label for="adminPassword">Lösenord</label>
+      <input type="password" id="adminPassword" name="password" placeholder="Ange ditt lösenord" required>
+  </div>
+  <button type="submit">Logga in</button>
+  <p class="error" id="adminLoginError"></p>
+</form>
   </div>
 </body>
 </html>

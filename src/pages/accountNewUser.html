@@ -7,7 +7,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../../dist/models/account.js" defer></script>
+    <script type="module" src="../../dist/models/accountNewUser.js" defer></script>
+    <script type="module" src="../../dist/models/accountStudent.js" defer></script>
+
     <link rel="stylesheet" href="../assets/css/site.css" />
     <title>Westcoast Education</title>
 </head>
@@ -25,11 +27,8 @@
 </header>
 <body>
 
-
-<h2>Välkommen, Student</h2>
     <h1 id="userName"></h1>
 <p>Här kan du boka kurser och se din kursstatus.</p>
-<main class="container">
 
 
     <form id="bookingForm">
@@ -84,7 +83,6 @@
         
             <button onclick="window.location.href='account.html';" type="submit">Boka kurs</button>
     </form>
-</main>
 
 
 <h2>Mina kurser</h2>
