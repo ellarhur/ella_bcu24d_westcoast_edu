@@ -1,3 +1,5 @@
+import { NewStudent } from "../models/newStudent.js";
+
 const form = document.querySelector(".registerForm");
 
 const initApp = () => {};
@@ -9,6 +11,9 @@ const handleSubmit = (e) => {
     const username = data.get('username');
     const password = data.get('password');
 
+
+    const user = new NewStudent(username,password);
+    console.log(user);
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
