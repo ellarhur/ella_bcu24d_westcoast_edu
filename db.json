@@ -743,6 +743,13 @@
       "email": "ella@gmail.com",
       "password": "ella1",
       "bookings": []
+    },
+    {
+      "id": "student1739397534453",
+      "name": "Ella",
+      "email": "ellabelle@gmail.com",
+      "password": "ella1",
+      "bookings": []
     }
   ],
   "teachers": [
