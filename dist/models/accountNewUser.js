@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    export function welcomeMessageAndName (newUser) {
     const userNameElement = document.querySelector("#userName");
     const welcomeMessageElement = document.querySelector("#welcomeMessage");
     
@@ -19,8 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (welcomeMessageElement) {
         welcomeMessageElement.innerHTML = `
-            <h2>Välkommen till Westcoast Education!</h2>
-            <p>Ditt konto har skapats framgångsrikt.</p>
+            <h2>Välkommen till Westcoast Education ${newUser.name}</h2>
             <p>E-postadress: ${newUser.email}</p>
             <p>Du kan nu börja boka kurser och se dem i din profil.</p>
         `;
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 bookingsListElement.appendChild(listItem);
             });
         } else {
-            bookingsListElement.innerHTML = "<p>Du har inga bokade kurser ännu. <a href='courses.html'>Se våra tillgängliga kurser</a>.</p>";
+            bookingsListElement.innerHTML = "<p>Du har inga bokade kurser ännu.</p>";
         }
     }
 });
