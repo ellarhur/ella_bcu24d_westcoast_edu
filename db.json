@@ -736,6 +736,13 @@
           "teacher": "Erik Lindström"
         }
       ]
+    },
+    {
+      "id": "student1739570324128",
+      "name": "Ella Åkesson Hummerdal",
+      "email": "ella.belle.hummerdahl@gmail.com",
+      "password": "ella1",
+      "bookings": []
     }
   ],
   "teachers": [

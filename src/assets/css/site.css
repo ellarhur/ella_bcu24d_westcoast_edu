@@ -119,8 +119,8 @@ body {
 }
 
 .coursecard {
-  background-color: #914e65;
-  border: 1px solid #914e65;
+  background-color: #0000;
+  border: 1px solid #000;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
