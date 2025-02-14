@@ -348,3 +348,45 @@ select {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+
+#bookingsList li{
+  background-color: #fff;
+  width:200px;
+  text-align:center;
+  padding:20px;
+  border:1px solid #000;
+  border-radius: 8px;
+}
+
+.bookings-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.remove-booking-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-booking-btn:hover {
+  background-color: darkred;
+}

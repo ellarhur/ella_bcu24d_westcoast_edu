@@ -26,10 +26,64 @@
 </header>
 <body>
 
-   <h2>Hej, <h1 id="userName"></h1></h2>
   <h1 id="welcomeMessage"></h1>
-<main class="container">
-    <form id="newBookings">
+
+    <form id="bookingForm">
+
+        <label for="course">Välj kurs från listan:</label>
+        <select name="course" id="course">
+            <option value="WEB101">WEB101 - Frontend Development</option>
+            <option value="WEB201">WEB201 - Backend Development</option>
+            <option value="WEB301">WEB301 - Fullstack Development</option>
+            <option value="DES101">DES101 - Introkurs till Figma och Adobe</option>
+            <option value="APP101">APP101 - Introkurs till apputveckling av iOS-appar</option>
+            <option value="APP102">APP102 - Introkurs till apputveckling av Android-appar</option>
+            <option value="AWS101">AWS101 - Arbeta med Molntjänster (AWS, Azure, Google Cloud)</option>
+            <option value="LAN101">LAN101 - Djupdyk i Python</option>
+            <option value="LAN201">LAN201 - Djupdyk i Java</option>
+            <option value="LAN301">LAN301 - Djupdyk i C#</option>
+            <option value="AI101">AI101 - Bli en proffsig AI prompt engineer</option>
+            <option value="AI201">AI201 - Programmera egna AI-verktyg</option>
+            <option value="NET101">NET101 - Grundläggande IT-säkerhet för nätverk</option>
+            <option value="NET201">NET201 - Etisk hackning och brandväggar</option>
+            <option value="COM101">COM101 - Gruppdynamik, GDPR och kontorsmiljön</option>
+            </select>
+        
+            <label for="email">Din email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="number">Ditt telefonnummer:</label>
+            <input type="number" id="number" name="number" required>
+        
+            <label for="adress">Din faktureringsadress:</label>
+            <input type="adress" id="adress" name="adress" required>
+
+            <div class="classroom-option">
+                <input type="radio" 
+                       id="classroom" 
+                       name="bookingType" 
+                       value="classroom" 
+                       required 
+                       class="mr-2">
+                <label for="classroom">På plats</label>
+            <div class="distance-option">
+                <input type="radio" 
+                       id="distance" 
+                       name="bookingType" 
+                       value="distance" 
+                       required 
+                       class="mr-2">
+                <label for="distance">På distans och on-demand</label>
+
+    </div>
+        
+        
+            <button type="submit">Boka kurs</button>
+    </form>
+
+
+<ul id="bookingsList"></ul>
+
 </main>
 </body>
 </html>

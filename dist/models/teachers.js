@@ -40,7 +40,6 @@ const createTeacherCard = (teacher) => {
     teacherCardBody.appendChild(heading);
     teacherCardBody.appendChild(descriptionText);
     div.appendChild(teacherCardBody);
-    // Skapa hover-text
     const hoverText = document.createElement('div');
     hoverText.classList.add('hover-text');
     hoverText.textContent = `Klicka på kortet för att logga in och ta kontakt med ${teacher.id}`;

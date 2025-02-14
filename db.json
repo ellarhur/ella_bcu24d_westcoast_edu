@@ -1,7 +1,7 @@
 {
   "courses": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Frontend Development",
       "number": "WEB101",
       "days": 15,
@@ -28,7 +28,7 @@
       "description": "Lär dig HTML, CSS och JavaScript för att skapa moderna och responsiva webbsidor."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Backend Development",
       "number": "WEB201",
       "days": 15,
@@ -53,7 +53,7 @@
       "description": "Djupdyk i serverhantering, databaser och API-utveckling."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Fullstack Development",
       "number": "WEB301",
       "days": 30,
@@ -77,7 +77,7 @@
       "description": "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Introkurs till Figma och Adobe",
       "number": "DES101",
       "days": 3,
@@ -100,7 +100,7 @@
       "description": "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Introkurs till apputveckling av iOS-appar",
       "number": "APP101",
       "days": 3,
@@ -124,7 +124,7 @@
       "description": "Lär dig grunderna i Swift och hur man skapar iPhone-appar."
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Introkurs till apputveckling av Android-appar",
       "number": "APP102",
       "days": 3,
@@ -151,7 +151,7 @@
       "description": "Bygg Android-applikationer med det kraftfulla språket Kotlin."
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Arbeta med Molntjänster (AWS, Azure, Google Cloud)",
       "number": "AWS101",
       "days": 15,
@@ -179,7 +179,7 @@
       "description": "Förstå hur du kan använda molntjänster för att hantera data och hosting."
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Djupdyk i Python",
       "number": "LAN101",
       "days": 30,
@@ -203,7 +203,7 @@
       "description": "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Djupdyk i Java",
       "number": "LAN201",
       "days": 30,
@@ -224,7 +224,7 @@
       "description": "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Djupdyk i C#",
       "number": "LAN301",
       "days": 30,
@@ -251,7 +251,7 @@
       "description": "Bygg robusta företagsapplikationer med Microsofts ramverk."
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Bli en proffsig AI prompt engineer",
       "number": "AI101",
       "days": 3,
@@ -276,7 +276,7 @@
       "description": "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Programmera egna AI-verktyg",
       "number": "AI201",
       "days": 3,
@@ -297,7 +297,7 @@
       "description": "För dig som är klar med webbapplikationer och vill jobba med AI!"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Grundläggande IT-säkerhet för nätverk",
       "number": "NET101",
       "days": 7,
@@ -318,7 +318,7 @@
       "description": "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Etisk hackning och brandväggar",
       "number": "NET201",
       "days": 7,
@@ -341,7 +341,7 @@
       "description": "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Gruppdynamik, GDPR och kontorsmiljön",
       "number": "COM101",
       "days": 2,
@@ -736,25 +736,13 @@
           "teacher": "Erik Lindström"
         }
       ]
-    },
-    {
-      "id": "student1739393883186",
-      "name": "ella",
-      "email": "ella@gmail.com",
-      "password": "ella1",
-      "bookings": []
-    },
-    {
-      "id": "student1739397534453",
-      "name": "Ella",
-      "email": "ellabelle@gmail.com",
-      "password": "ella1",
-      "bookings": []
     }
   ],
   "teachers": [
     {
       "id": "Anna Forsberg",
+      "email": "anna@email.com",
+      "password": "anna1",
       "subject": "Webbutveckling & UX/UI-design",
       "classroom": true,
       "online": true,
@@ -763,6 +751,8 @@
     },
     {
       "id": "Erik Lindström",
+      "email": "erik@email.com",
+      "password": "erik1",
       "subject": "Systemutveckling & Databaser",
       "classroom": true,
       "online": false,
@@ -771,6 +761,8 @@
     },
     {
       "id": "Sofia Berglund",
+      "email": "sofia@email.com",
+      "password": "sofia1",
       "subject": "Cybersäkerhet & Nätverkssäkerhet",
       "classroom": false,
       "online": true,
@@ -779,6 +771,8 @@
     },
     {
       "id": "Johan Ekström",
+      "password": "johan1",
+      "email": "johan@email.com",
       "subject": "Programmering i Python & Java",
       "classroom": true,
       "online": true,
@@ -787,6 +781,8 @@
     },
     {
       "id": "Lisa Nygren",
+      "password": "lisa1",
+      "email": "lisa@email.com",
       "subject": "AI & Maskininlärning",
       "classroom": true,
       "online": false,
@@ -795,6 +791,8 @@
     },
     {
       "id": "Daniel Sjöberg",
+      "password": "daniel1",
+      "email": "daniel@email.com",
       "subject": "IT-projektledning & Agila metoder",
       "classroom": false,
       "online": true,
@@ -803,6 +801,8 @@
     },
     {
       "id": "Elon Karlsson",
+      "password": "elon1",
+      "email": "elon@email.com",
       "subject": "Mobilapp-utveckling (Android & iOS)",
       "classroom": true,
       "online": true,
@@ -811,6 +811,8 @@
     },
     {
       "id": "Magnus Hellström",
+      "password": "magnus1",
+      "email": "magnus@email.com",
       "subject": "Cloud Computing & DevOps",
       "classroom": true,
       "online": false,
@@ -819,6 +821,8 @@
     },
     {
       "id": "Cameron Sundberg",
+      "password": "cameron1",
+      "email": "cameron@email.com",
       "subject": "Spelutveckling & 3D-grafik",
       "classroom": false,
       "online": true,
@@ -827,6 +831,8 @@
     },
     {
       "id": "Fredrik Norén",
+      "password": "fredrik1",
+      "email": "fredrik@email.com",
       "subject": "Embedded Systems & IoT",
       "classroom": true,
       "online": true,
