@@ -7,13 +7,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../models/accountTeacher.js"></script>
+    <script type="module" src="../../dist/models/accountTeacher.js" defer></script>
     <link rel="stylesheet" href="../assets/css/site.css" />
     <title>Westcoast Education</title>
 </head>
 <header>
 <div class="login">
-    <button onclick="window.location.href='log-sign.html';" type="button">Logga in</button>
+    <button type="submit" id="logoutButton">Logga ut</button>
     <button onclick="window.location.href='log-sign.html';" type="button">Skapa konto</button></div>
     <h1><a href="../pages/index.html">Westcoast Education</a></h1>
     <nav>    <ul>
@@ -88,7 +88,5 @@
         </div>
     </section>
 
-<button onclick="logout()">Logga ut</button>
-    
 </body>
 </html>

@@ -1,12 +1,13 @@
 import { teachers } from '../data/teachers.js';
+
 const initApp = () => {
     console.log("Det här funkar!");
     listTeachers();
 };
-const listTeachers = () => {
+export const listTeachers = () => {
     displayTeachers(teachers);
 };
-const displayTeachers = (teachers) => {
+export const displayTeachers = (teachers) => {
     const app = document.querySelector("#teachers");
     if (!app) {
         console.error("Elementet #teachers hittades inte!");

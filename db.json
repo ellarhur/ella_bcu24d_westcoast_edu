@@ -845,6 +845,11 @@
       "online": true,
       "image": "/images/teacher10.png",
       "description": "Specialist på inbyggda system och hårdvarunära programmering. Hjälper studenter att koppla upp och styra IoT-enheter."
+    },
+    {
+      "id": "Ella Åkesson",
+      "email": "ella@ella.com",
+      "subject": "Python"
     }
   ]
 }
