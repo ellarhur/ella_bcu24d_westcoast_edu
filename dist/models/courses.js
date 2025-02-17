@@ -9,7 +9,7 @@ export const listCourses = async () => {
 };
 export { courses };
 const initApp = () => {
-    console.log('martin ella och elton kollar om det funkar!');
+    console.log('Scriptet körs!');
     listCourses();
 };
 const displayCourses = (courses) => {

@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ES2020",
+    "module": "ESNext",                      // Bättre modulinställning för moderna projekt
+    "moduleResolution": "Node",              // För att hantera Node.js-moduler korrekt
+    "esModuleInterop": true,                 // För bättre import/export-hantering
     "outDir": "./dist", 
     "rootDir": "./src", 
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "src/data/courses.ts"],
+  "include": ["src", "src/data/courses.ts", "tests/**/*"],   // Lägg till testmappen om du har en sådan
   "exclude": ["node_modules"]
 }

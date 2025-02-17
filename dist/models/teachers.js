@@ -1,13 +1,12 @@
 import { teachers } from '../data/teachers.js';
-
 const initApp = () => {
     console.log("Det här funkar!");
     listTeachers();
 };
-export const listTeachers = () => {
+const listTeachers = () => {
     displayTeachers(teachers);
 };
-export const displayTeachers = (teachers) => {
+const displayTeachers = (teachers) => {
     const app = document.querySelector("#teachers");
     if (!app) {
         console.error("Elementet #teachers hittades inte!");
@@ -41,6 +40,7 @@ const createTeacherCard = (teacher) => {
     teacherCardBody.appendChild(heading);
     teacherCardBody.appendChild(descriptionText);
     div.appendChild(teacherCardBody);
+    // Skapa hover-text
     const hoverText = document.createElement('div');
     hoverText.classList.add('hover-text');
     hoverText.textContent = `Klicka på kortet för att logga in och ta kontakt med ${teacher.id}`;

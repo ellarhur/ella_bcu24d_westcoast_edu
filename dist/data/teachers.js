@@ -1,6 +1,8 @@
 export const teachers = [
     {
         id: 'Anna Forsberg',
+        email: 'anna@email.com',
+        password: 'anna1',
         subject: 'Webbutveckling & UX/UI-design',
         classroom: true,
         online: true,
@@ -9,6 +11,8 @@ export const teachers = [
     },
     {
         id: 'Erik Lindström',
+        email: 'erik@email.com',
+        password: 'erik1',
         subject: 'Systemutveckling & Databaser',
         classroom: true,
         online: false,
@@ -17,6 +21,8 @@ export const teachers = [
     },
     {
         id: 'Sofia Berglund',
+        email: 'sofia@email.com',
+        password: 'sofia1',
         subject: 'Cybersäkerhet & Nätverkssäkerhet',
         classroom: false,
         online: true,
@@ -25,6 +31,8 @@ export const teachers = [
     },
     {
         id: 'Johan Ekström',
+        email: 'johan@email.com',
+        password: 'johan1',
         subject: 'Programmering i Python & Java',
         classroom: true,
         online: true,
@@ -33,6 +41,8 @@ export const teachers = [
     },
     {
         id: 'Lisa Nygren',
+        email: 'lisa@email.com',
+        password: 'lisa1',
         subject: 'AI & Maskininlärning',
         classroom: true,
         online: false,
@@ -41,6 +51,8 @@ export const teachers = [
     },
     {
         id: 'Daniel Sjöberg',
+        email: 'daniel@email.com',
+        password: 'daniel1',
         subject: 'IT-projektledning & Agila metoder',
         classroom: false,
         online: true,
@@ -49,6 +61,8 @@ export const teachers = [
     },
     {
         id: 'Elon Karlsson',
+        email: 'elon@email.com',
+        password: 'elon1',
         subject: 'Mobilapp-utveckling (Android & iOS)',
         classroom: true,
         online: true,
@@ -57,6 +71,8 @@ export const teachers = [
     },
     {
         id: 'Magnus Hellström',
+        email: 'magnus@email.com',
+        password: 'magnus1',
         subject: 'Cloud Computing & DevOps',
         classroom: true,
         online: false,
@@ -65,6 +81,8 @@ export const teachers = [
     },
     {
         id: 'Cameron Sundberg',
+        email: 'cameron@email.com',
+        password: 'cameron1',
         subject: 'Spelutveckling & 3D-grafik',
         classroom: false,
         online: true,
@@ -73,6 +91,8 @@ export const teachers = [
     },
     {
         id: 'Fredrik Norén',
+        email: 'fredrik@email.com',
+        password: 'fredrik1',
         subject: 'Embedded Systems & IoT',
         classroom: true,
         online: true,
