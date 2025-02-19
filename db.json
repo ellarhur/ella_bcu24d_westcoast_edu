@@ -1,0 +1,856 @@
+{
+    "courses": [
+      {
+        "id": "1",
+        "title": "Frontend Development",
+        "number": "WEB101",
+        "days": 15,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs1.png",
+        "dates": [
+          "2025-03-01 - 2025-03-15"
+        ],
+        "students": [
+          "George",
+          "Hannah",
+          "Isabella",
+          "Jenny",
+          "Johnny",
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fanny"
+        ],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Anna Forsberg",
+        "description": "Lär dig HTML, CSS och JavaScript för att skapa moderna och responsiva webbsidor."
+      },
+      {
+        "id": "2",
+        "title": "Backend Development",
+        "number": "WEB201",
+        "days": 15,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs2.png",
+        "dates": [
+          "2025-03-20 – 2025-04-05"
+        ],
+        "students": [
+          "Hannah",
+          "Isabella",
+          "Jenny",
+          "Johnny",
+          "Leah",
+          "Omar",
+          "Fanny"
+        ],
+        "average": "D",
+        "price": "3500 SEK",
+        "teacher": "Fredrik Norén",
+        "description": "Djupdyk i serverhantering, databaser och API-utveckling."
+      },
+      {
+        "id": "3",
+        "title": "Fullstack Development",
+        "number": "WEB301",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs3.png",
+        "dates": [
+          "2025-04-10 – 2025-05-10"
+        ],
+        "students": [
+          "Jenny",
+          "Johnny",
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fanny"
+        ],
+        "average": "C",
+        "price": "7000 SEK",
+        "teacher": "Anna Forsberg",
+        "description": "Kombinera frontend- och backend-kunskaper för att bli en komplett utvecklare."
+      },
+      {
+        "id": "4",
+        "title": "Introkurs till Figma och Adobe",
+        "number": "DES101",
+        "days": 3,
+        "classroom": true,
+        "online": false,
+        "image": "/images/kurs4.png",
+        "dates": [
+          "2025-02-15 – 2025-02-17"
+        ],
+        "students": [
+          "George",
+          "Hannah",
+          "Isabella",
+          "Leah",
+          "Dennis"
+        ],
+        "average": "B",
+        "price": "1500 SEK",
+        "teacher": "Sofia Berglund",
+        "description": "Skapa användarvänliga gränssnitt och prototyper för webb- och mobilappar."
+      },
+      {
+        "id": "5",
+        "title": "Introkurs till apputveckling av iOS-appar",
+        "number": "APP101",
+        "days": 3,
+        "classroom": true,
+        "online": false,
+        "image": "/images/kurs5.png",
+        "dates": [
+          "2025-03-05 – 2025-03-07"
+        ],
+        "students": [
+          "Johnny",
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fanny",
+          "Martin"
+        ],
+        "average": "A",
+        "price": "1500 SEK",
+        "teacher": "Johan Ekström",
+        "description": "Lär dig grunderna i Swift och hur man skapar iPhone-appar."
+      },
+      {
+        "id": "6",
+        "title": "Introkurs till apputveckling av Android-appar",
+        "number": "APP102",
+        "days": 3,
+        "classroom": true,
+        "online": false,
+        "image": "/images/kurs6.png",
+        "dates": [
+          "2025-03-12 – 2025-03-14"
+        ],
+        "students": [
+          "Mandy",
+          "George",
+          "Hannah",
+          "Isabella",
+          "George",
+          "Dennis",
+          "Omar",
+          "Fanny",
+          "Fia"
+        ],
+        "average": "E",
+        "price": "1500 SEK",
+        "teacher": "Johan Ekström",
+        "description": "Bygg Android-applikationer med det kraftfulla språket Kotlin."
+      },
+      {
+        "id": "7",
+        "title": "Arbeta med Molntjänster (AWS, Azure, Google Cloud)",
+        "number": "AWS101",
+        "days": 15,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs7.png",
+        "dates": [
+          "2025-05-15 – 2025-05-30"
+        ],
+        "students": [
+          "Martin",
+          "Johan",
+          "Isabella",
+          "Jenny",
+          "Johnny",
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fanny",
+          "Isabella"
+        ],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Magnus Hellström",
+        "description": "Förstå hur du kan använda molntjänster för att hantera data och hosting."
+      },
+      {
+        "id": "8",
+        "title": "Djupdyk i Python",
+        "number": "LAN101",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs8.png",
+        "dates": [
+          " 2025-06-01 – 2025-07-01"
+        ],
+        "students": [
+          "Martin",
+          "Johnny",
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fanny"
+        ],
+        "average": "D",
+        "price": "7000 SEK",
+        "teacher": "Lisa Nygren",
+        "description": "Perfekt för nybörjare som vill lära sig ett mångsidigt språk."
+      },
+      {
+        "id": "9",
+        "title": "Djupdyk i Java",
+        "number": "LAN201",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs9.png",
+        "dates": [
+          "2025-07-05 – 2025-08-05"
+        ],
+        "students": [
+          "Fia",
+          "Martin",
+          "Lenny"
+        ],
+        "average": "G",
+        "price": "7000 SEK",
+        "teacher": "Elon Karlsson",
+        "description": "Djupdyk i konceptet objektorientering och bygg kraftfulla applikationer."
+      },
+      {
+        "id": "10",
+        "title": "Djupdyk i C#",
+        "number": "LAN301",
+        "days": 30,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs10.png",
+        "dates": [
+          " 2025-08-10 – 2025-09-10"
+        ],
+        "students": [
+          "Jenny",
+          "Johnny",
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fanny",
+          "Fia",
+          "Martin",
+          "Lenny"
+        ],
+        "average": "B",
+        "price": "7000 SEK",
+        "teacher": "Cameron Sundberg",
+        "description": "Bygg robusta företagsapplikationer med Microsofts ramverk."
+      },
+      {
+        "id": "11",
+        "title": "Bli en proffsig AI prompt engineer",
+        "number": "AI101",
+        "days": 3,
+        "classroom": true,
+        "online": false,
+        "image": "/images/kurs11.png",
+        "dates": [
+          "2025-04-01 – 2025-04-03"
+        ],
+        "students": [
+          "George",
+          "Hannah",
+          "Fia",
+          "Martin",
+          "Lenny",
+          "Omar",
+          "Fanny"
+        ],
+        "average": "E",
+        "price": "1500 SEK",
+        "teacher": "Fredrik Norén",
+        "description": "Lär dig de bästa prompsten för att utveckla framtiden med AI!"
+      },
+      {
+        "id": "12",
+        "title": "Programmera egna AI-verktyg",
+        "number": "AI201",
+        "days": 3,
+        "classroom": true,
+        "online": false,
+        "image": "/images/kurs12.png",
+        "dates": [
+          "2025-04-10 – 2025-04-12"
+        ],
+        "students": [
+          "George",
+          "Hannah",
+          "Isabella"
+        ],
+        "average": "D",
+        "price": "1500 SEK",
+        "teacher": "Fredrik Norén",
+        "description": "För dig som är klar med webbapplikationer och vill jobba med AI!"
+      },
+      {
+        "id": "13",
+        "title": "Grundläggande IT-säkerhet för nätverk",
+        "number": "NET101",
+        "days": 7,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs13.png",
+        "dates": [
+          "2025-09-15 – 2025-09-22"
+        ],
+        "students": [
+          "George",
+          "Hannah",
+          "Isabella"
+        ],
+        "average": "C",
+        "price": "2500 SEK",
+        "teacher": "Daniel Sjöberg",
+        "description": "Förstå nätverksarkitektur och hur man säkrar system mot attacker."
+      },
+      {
+        "id": "14",
+        "title": "Etisk hackning och brandväggar",
+        "number": "NET201",
+        "days": 7,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs14.jpg",
+        "dates": [
+          "2025-09-25 – 2025-10-02"
+        ],
+        "students": [
+          "George",
+          "Hannah",
+          "Fia",
+          "Martin",
+          "Lenny"
+        ],
+        "average": "B",
+        "price": "2500 SEK",
+        "teacher": "Daniel Sjöberg",
+        "description": "Utforska hur du kan identifiera och fixa säkerhetsbrister i system."
+      },
+      {
+        "id": "15",
+        "title": "Gruppdynamik, GDPR och kontorsmiljön",
+        "number": "COM101",
+        "days": 2,
+        "classroom": false,
+        "online": true,
+        "image": "/images/kurs15.png",
+        "dates": [
+          "2025-10-10"
+        ],
+        "students": [
+          "Leah",
+          "Dennis",
+          "Omar",
+          "Fia",
+          "Martin",
+          "Lenny"
+        ],
+        "average": "A",
+        "price": "3500 SEK",
+        "teacher": "Erik Lindström",
+        "description": "Två-dagarsföreläsning för elever inom IT-sektorn för att förbättra arbetsmiljön i framtida yrken."
+      }
+    ],
+    "students": [
+      {
+        "id": "student1",
+        "name": "George",
+        "email": "george@email.com",
+        "password": "george1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          }
+        ]
+      },
+      {
+        "id": "student2",
+        "name": "Hannah",
+        "email": "hannah@email.com",
+        "password": "hannah1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          }
+        ]
+      },
+      {
+        "id": "student3",
+        "name": "Isabella",
+        "email": "isabella@email.com",
+        "password": "isabella",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          }
+        ]
+      },
+      {
+        "id": "student4",
+        "name": "Jenny",
+        "email": "jenny@email.com",
+        "password": "jenny1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          }
+        ]
+      },
+      {
+        "id": "student5",
+        "name": "Johnny",
+        "email": "johnny@email.com",
+        "password": "johnny1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          }
+        ]
+      },
+      {
+        "id": "student6",
+        "name": "Leah",
+        "email": "leah@email.com",
+        "password": "leah1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          }
+        ]
+      },
+      {
+        "id": "student7",
+        "name": "Dennis",
+        "email": "dennis@email.com",
+        "password": "dennis1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          }
+        ]
+      },
+      {
+        "id": "student8",
+        "name": "Omar",
+        "email": "omar@email.com",
+        "password": "omar1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          }
+        ]
+      },
+      {
+        "id": "student9",
+        "name": "Fanny",
+        "email": "fanny@email.com",
+        "password": "fanny1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          }
+        ]
+      },
+      {
+        "id": "student10",
+        "name": "Martin",
+        "email": "martin@email.com",
+        "password": "martin1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          },
+          {
+            "courseId": "AI101",
+            "courseName": "Bli en proffsig AI prompt engineer",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "AI201",
+            "courseName": "Programmera egna AI-verktyg",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "NET101",
+            "courseName": "Grundläggande IT-säkerhet för nätverk",
+            "teacher": "Daniel Sjöberg"
+          },
+          {
+            "courseId": "NET201",
+            "courseName": "Etisk hackning och brandväggar",
+            "teacher": "Daniel Sjöberg"
+          }
+        ]
+      },
+      {
+        "id": "student11",
+        "name": "Fia",
+        "email": "fia@email.com",
+        "password": "fia1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          },
+          {
+            "courseId": "AI101",
+            "courseName": "Bli en proffsig AI prompt engineer",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "AI201",
+            "courseName": "Programmera egna AI-verktyg",
+            "teacher": "Fredrik Norén"
+          }
+        ]
+      },
+      {
+        "id": "student12",
+        "name": "Lenny",
+        "email": "lenny@email.com",
+        "password": "lenny1",
+        "bookings": [
+          {
+            "courseId": "WEB101",
+            "courseName": "Frontend Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "WEB201",
+            "courseName": "Backend Development",
+            "teacher": "Fredrik Norén"
+          },
+          {
+            "courseId": "WEB301",
+            "courseName": "Fullstack Development",
+            "teacher": "Anna Forsberg"
+          },
+          {
+            "courseId": "LAN301",
+            "courseName": "Djupdyk i C#",
+            "teacher": "Cameron Sundberg"
+          },
+          {
+            "courseId": "COM101",
+            "courseName": "Gruppdynamik, GDPR och kontorsmiljön",
+            "teacher": "Erik Lindström"
+          }
+        ]
+      },
+      {
+        "id": "student1739570324128",
+        "name": "Ella Åkesson Hummerdal",
+        "email": "ella.belle.hummerdahl@gmail.com",
+        "password": "ella1",
+        "bookings": []
+      }
+    ],
+    "teachers": [
+      {
+        "id": "Anna Forsberg",
+        "email": "anna@email.com",
+        "password": "anna1",
+        "subject": "Webbutveckling & UX/UI-design",
+        "classroom": true,
+        "online": true,
+        "image": "/images/teacher1.jpg",
+        "description": "En engagerad lärare med fokus på HTML, CSS och JavaScript. Hon älskar att lära ut modern design och tillgänglighet på webben."
+      },
+      {
+        "id": "Erik Lindström",
+        "email": "erik@email.com",
+        "password": "erik1",
+        "subject": "Systemutveckling & Databaser",
+        "classroom": true,
+        "online": false,
+        "image": "/images/teacher2.jpg",
+        "description": "Har en bakgrund som backend-utvecklare och lär studenter att bygga robusta system med SQL, NoSQL och API:er."
+      },
+      {
+        "id": "Sofia Berglund",
+        "email": "sofia@email.com",
+        "password": "sofia1",
+        "subject": "Cybersäkerhet & Nätverkssäkerhet",
+        "classroom": false,
+        "online": true,
+        "image": "/images/teacher4.png",
+        "description": "Expert på penetrationstester och säker programmering. Brinner för att utbilda studenter i att skydda system från cyberattacker."
+      },
+      {
+        "id": "Johan Ekström",
+        "password": "johan1",
+        "email": "johan@email.com",
+        "subject": "Programmering i Python & Java",
+        "classroom": true,
+        "online": true,
+        "image": "/images/teacher3.jpg",
+        "description": "Har arbetat som mjukvaruutvecklare i 15 år. Gör kodning roligt genom att bygga små spel och AI-projekt i undervisningen."
+      },
+      {
+        "id": "Lisa Nygren",
+        "password": "lisa1",
+        "email": "lisa@email.com",
+        "subject": "AI & Maskininlärning",
+        "classroom": true,
+        "online": false,
+        "image": "/images/teacher5.png",
+        "description": "Passionerad om dataanalys och artificiell intelligens. Fokuserar på praktisk AI-användning med TensorFlow och Python."
+      },
+      {
+        "id": "Daniel Sjöberg",
+        "password": "daniel1",
+        "email": "daniel@email.com",
+        "subject": "IT-projektledning & Agila metoder",
+        "classroom": false,
+        "online": true,
+        "image": "/images/teacher6.png",
+        "description": "Hjälper studenter att förstå Scrum, Kanban och hur man effektivt leder IT-projekt i företag."
+      },
+      {
+        "id": "Elon Karlsson",
+        "password": "elon1",
+        "email": "elon@email.com",
+        "subject": "Mobilapp-utveckling (Android & iOS)",
+        "classroom": true,
+        "online": true,
+        "image": "/images/teacher7.png",
+        "description": "Specialist på React Native och Swift. Brinner för att utveckla smarta appar med snygg design."
+      },
+      {
+        "id": "Magnus Hellström",
+        "password": "magnus1",
+        "email": "magnus@email.com",
+        "subject": "Cloud Computing & DevOps",
+        "classroom": true,
+        "online": false,
+        "image": "/images/teacher8.png",
+        "description": "Lär ut AWS, Docker och Kubernetes. Hjälper studenter att förstå hur man bygger skalbara system i molnet."
+      },
+      {
+        "id": "Cameron Sundberg",
+        "password": "cameron1",
+        "email": "cameron@email.com",
+        "subject": "Spelutveckling & 3D-grafik",
+        "classroom": false,
+        "online": true,
+        "image": "/images/teacher9.png",
+        "description": "Arbetade tidigare på en spelstudio och lär ut Unity och Unreal Engine. Motiverar studenter att skapa sina egna spel."
+      },
+      {
+        "id": "Fredrik Norén",
+        "password": "fredrik1",
+        "email": "fredrik@email.com",
+        "subject": "Embedded Systems & IoT",
+        "classroom": true,
+        "online": true,
+        "image": "/images/teacher10.png",
+        "description": "Specialist på inbyggda system och hårdvarunära programmering. Hjälper studenter att koppla upp och styra IoT-enheter."
+      },
+      {
+        "id": "Ella Åkesson",
+        "email": "ella@ella.com",
+        "subject": "Python"
+      }
+    ]
+  }
+  
