@@ -79,11 +79,13 @@ body {
   font-family: 'Albert Sans', serif;
   position: absolute;
   color: #374375;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   background-color: #fffcf5;
   padding: 10px;
   border-radius: 15px;
+  padding:3rem;
+  height:3rem;
 }
 
 .popularcourse {
@@ -282,9 +284,10 @@ select {
 }
 
 .teachercard {
-  background-color: #914e65;
-  border: 1px solid #914e65;
+  background: #fffcf5;
+  color: #914e65;
   border-radius: 8px;
+  border: 1px solid #914e65;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -301,8 +304,9 @@ select {
 }
 .teachercard:hover {
   transform: scale(1.08);
-  background: #fffcf5;
-  color: #914e65;
+  color: #fffcf5;
+  background-color: #914e65;
+  border: 1px solid #914e65;
 }
 
 .course-details-top {
